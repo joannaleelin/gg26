@@ -660,6 +660,24 @@ def main():
     print(f"Wrote {OUT}", file=sys.stderr)
     print(f"  - entries: {len(parsed)}", file=sys.stderr)
 
+    # Pre-render one HTML file per slug so Vercel's cleanUrls serves
+    # /staff/<slug> directly without needing a rewrite. Each file is just
+    # a copy of the _detail.html template; the JS inside still figures
+    # out the slug from location.pathname and renders the right person.
+    template_path = os.path.join(REPO, "staff", "_detail.html")
+    template = open(template_path, "r", encoding="utf-8").read()
+    slug_dir = os.path.join(REPO, "staff")
+    written_slugs = []
+    for entry in parsed:
+        slug = entry["_slug"]
+        if not slug or slug in ("_detail", "index"):
+            continue
+        path = os.path.join(slug_dir, f"{slug}.html")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(template)
+        written_slugs.append(slug)
+    print(f"Pre-rendered {len(written_slugs)} per-slug HTML files in {slug_dir}/", file=sys.stderr)
+
 
 if __name__ == "__main__":
     main()

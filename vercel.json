@@ -1,9 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/staff/(.+)", "destination": "/staff/_detail.html" }
-  ],
   "headers": [
     {
       "source": "/(.*\\.html)",
