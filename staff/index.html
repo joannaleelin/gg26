@@ -85,6 +85,12 @@ function esc(s) {
 }
 
 // ----- team filter pills -----
+// Teams excluded from the filter pill row (still appear as chips on staff cards):
+//   - "Float" — utility role, not a meaningful filter group
+//   - NO_ASSIGNMENT — not actionable as a filter
+//   - any team with only 1 person — not useful to filter to a single name
+const EXCLUDED_TEAMS = new Set(['Float', NO_ASSIGNMENT]);
+
 function buildTeamFilter() {
   // Collect teams in the current phase, with counts
   const counts = {};
@@ -92,11 +98,10 @@ function buildTeamFilter() {
     const k = teamKeyFor(s, currentPhase);
     counts[k] = (counts[k] || 0) + 1;
   }
-  // Sort: real teams alphabetically, "No Assignment" last
+  // Filter out excluded teams and singletons; sort alphabetically
   const teams = Object.keys(counts)
-    .filter(k => k !== NO_ASSIGNMENT)
+    .filter(k => !EXCLUDED_TEAMS.has(k) && counts[k] >= 2)
     .sort((a, b) => a.localeCompare(b));
-  if (counts[NO_ASSIGNMENT]) teams.push(NO_ASSIGNMENT);
 
   const allCount = DATA.staff.length;
   const pills = [
