@@ -273,40 +273,77 @@ body::before {
   transform: translateX(2px);
 }
 
-/* Quick find banner */
+/* Quick find — typeahead search on home page */
 .quick-find {
+  position: relative;
   margin: 0 22px 12px;
-  padding: 16px 18px;
+  padding: 12px 16px;
   background: linear-gradient(135deg, var(--gold-soft) 0%, transparent 100%);
   border: 1px solid var(--gold-deep);
   border-radius: 14px;
   display: flex;
   align-items: center;
-  gap: 14px;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--text);
-  transition: border-color 0.18s, transform 0.18s;
+  gap: 12px;
+  transition: border-color 0.18s;
 }
-.quick-find:active { transform: scale(0.98); }
-.quick-find:hover { border-color: var(--gold); }
+.quick-find:focus-within,
+.quick-find.open { border-color: var(--gold); }
 
 .quick-find .icon {
-  font-size: 22px;
+  font-size: 18px;
   filter: drop-shadow(0 0 8px var(--gold-glow));
+  flex-shrink: 0;
 }
-.quick-find .text { flex: 1; }
-.quick-find .text strong {
-  display: block;
-  font-size: 14px;
+
+.quick-find-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  padding: 4px 0;
+}
+.quick-find-input::placeholder {
   color: var(--gold-bright);
-  letter-spacing: 0.02em;
-  font-weight: 600;
-  margin-bottom: 2px;
+  opacity: 0.65;
 }
-.quick-find .text span {
-  font-size: 12px;
-  color: var(--text-dim);
+
+.quick-find-results {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 30;
+}
+.quick-find-results .qf-result {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+  transition: background 0.12s, color 0.12s;
+}
+.quick-find-results .qf-result:hover,
+.quick-find-results .qf-result.active {
+  background: var(--gold-soft);
+  color: var(--gold-bright);
+}
+.quick-find-results .qf-result mark {
+  background: transparent;
+  color: var(--gold-bright);
+  font-weight: 700;
 }
 
 /* ============================================================================
@@ -338,6 +375,15 @@ body::before {
   letter-spacing: 0.01em;
   margin-bottom: 24px;
 }
+
+/* Dense page (walkies) — tighter spacing for at-a-glance reading */
+.page-content.dense .section-h { font-size: 22px; margin: 8px 0 4px; }
+.page-content.dense .section-h::before { margin-bottom: 8px; }
+.page-content.dense .section-sub { font-size: 12px; margin-bottom: 12px; }
+.page-content.dense .callout { padding: 10px 14px; margin-bottom: 10px; }
+.page-content.dense .callout .label { margin-bottom: 4px; font-size: 9.5px; }
+.page-content.dense .callout .body { font-size: 13px; line-height: 1.45; }
+.page-content.dense .callout .protocol-list li { margin-bottom: 3px; line-height: 1.45; }
 
 /* ============================================================================
    STAFF DIRECTORY
@@ -426,7 +472,7 @@ body::before {
   font-weight: 600;
 }
 
-a.staff-card,
+.staff-card,
 a.staff-card:visited {
   display: block;
   background: var(--bg-elev);
@@ -441,10 +487,10 @@ a.staff-card:visited {
   transition: border-color 0.18s, background 0.18s;
   position: relative;
 }
-a.staff-card:hover { border-color: var(--gold-deep); }
-a.staff-card:active { background: var(--bg-elev-2); }
+.staff-card:hover { border-color: var(--gold-deep); }
+.staff-card:active { background: var(--bg-elev-2); }
 
-a.staff-card .name {
+.staff-card .name {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 19px;
   font-weight: 600;
@@ -453,18 +499,79 @@ a.staff-card .name {
   color: var(--text);
 }
 
-a.staff-card .role {
+.staff-card .role {
   font-size: 13px;
   color: var(--text-dim);
   line-height: 1.45;
 }
-a.staff-card .role.dim { color: var(--text-faint); }
+.staff-card .role.dim { color: var(--text-faint); }
 
-a.staff-card .meta {
+.staff-card .meta {
   display: flex;
   gap: 6px;
   margin-top: 10px;
   flex-wrap: wrap;
+}
+
+/* Team filter — horizontal scrolling pill row */
+.team-filter {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 6px;
+  padding: 0 22px 10px;
+  scroll-padding-left: 22px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.team-filter::-webkit-scrollbar { display: none; }
+.team-pill {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.team-pill:hover { border-color: var(--gold-deep); color: var(--text); }
+.team-pill.active {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+.team-pill .count {
+  margin-left: 4px;
+  opacity: 0.7;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Team chip on staff card — clickable, sets filter */
+.staff-card .team-chip {
+  font: inherit;
+  cursor: pointer;
+  /* matches .chip.gold */
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--gold-soft);
+  color: var(--gold-bright);
+  border: 1px solid rgba(200, 156, 63, 0.3);
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  transition: border-color 0.15s, background 0.15s;
+}
+.staff-card .team-chip:hover {
+  border-color: var(--gold-bright);
+  background: rgba(200, 156, 63, 0.18);
 }
 
 .chip {
@@ -803,36 +910,43 @@ details.faq .answer a {
 /* ============================================================================
    WALKIES
    ============================================================================ */
-.walkie-list { display: flex; flex-direction: column; gap: 6px; }
+.walkie-list { display: flex; flex-direction: column; gap: 4px; }
 
 .walkie-item {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 14px 16px;
+  gap: 12px;
+  padding: 8px 12px;
   background: var(--bg-elev);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 8px;
   transition: border-color 0.18s;
 }
 .walkie-item:hover { border-color: var(--gold-deep); }
 
+/* Gold House channels — highlighted with a gold outline so they're easy to spot */
+.walkie-item.gh-channel {
+  border-color: rgba(200, 156, 63, 0.55);
+  background: linear-gradient(135deg, var(--gold-soft) 0%, var(--bg-elev) 80%);
+}
+.walkie-item.gh-channel .walkie-num { color: var(--gold-bright); }
+
 .walkie-num {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   font-style: italic;
   color: var(--gold);
-  width: 36px;
+  width: 28px;
   text-align: center;
   flex-shrink: 0;
   letter-spacing: -0.02em;
 }
 
 .walkie-label {
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   color: var(--text);
 }
 

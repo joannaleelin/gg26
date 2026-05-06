@@ -18,7 +18,7 @@
     <span class="title">Walkies & Protocol</span>
   </header>
 
-  <div class="page-content">
+  <div class="page-content dense">
     <h2 class="section-h">Walkie Channels</h2>
     <p class="section-sub">For leads on radio comms with Sequoia</p>
 
@@ -29,7 +29,7 @@
 
     <div id="walkiesContent"></div>
 
-    <h2 class="section-h" style="margin-top: 36px">Radio Protocol</h2>
+    <h2 class="section-h" style="margin-top: 22px">Radio Protocol</h2>
     <p class="section-sub">When in doubt, just talk. Clarity beats protocol.</p>
 
     <div class="callout">
@@ -80,7 +80,7 @@
       </div>
     </div>
 
-    <h2 class="section-h" style="margin-top: 36px">Comms Protocol</h2>
+    <h2 class="section-h" style="margin-top: 22px">Comms Protocol</h2>
 
     <div class="callout">
       <div class="label">If you're a lead</div>
@@ -101,10 +101,17 @@ function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
+// Channels that Gold House staff use directly (highlighted with gold outline)
+const GH_CHANNELS = new Set([1, 10, 11, 12, 13, 14]);
+
 document.getElementById('walkiesContent').innerHTML = '<div class="walkie-list">' +
   DATA.walkies.map(w => {
     const m = w.match(/^(\d+)\s*-\s*(.+)$/);
-    if (m) return `<div class="walkie-item"><span class="walkie-num">${m[1]}</span><span class="walkie-label">${esc(m[2])}</span></div>`;
+    if (m) {
+      const num = parseInt(m[1], 10);
+      const cls = GH_CHANNELS.has(num) ? 'walkie-item gh-channel' : 'walkie-item';
+      return `<div class="${cls}"><span class="walkie-num">${m[1]}</span><span class="walkie-label">${esc(m[2])}</span></div>`;
+    }
     return `<div class="walkie-item"><span class="walkie-num">—</span><span class="walkie-label">${esc(w)}</span></div>`;
   }).join('') + '</div>';
 </script>

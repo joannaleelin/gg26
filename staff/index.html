@@ -25,6 +25,7 @@
       <button class="phase-tab" data-phase="dinner">Dinner & Program</button>
       <button class="phase-tab" data-phase="founders">Founders Party</button>
     </div>
+    <div class="team-filter" id="teamFilter"></div>
     <div class="search-wrap">
       <span class="search-icon">⌕</span>
       <input class="search" id="staffSearch" placeholder="Search by name, role, or team…" autocomplete="off" autocapitalize="words">
@@ -40,74 +41,175 @@
 <script>
 const DATA = window.GG_DATA;
 const SHEETS = window.GG_INFO_SHEETS || {};
+const NO_ASSIGNMENT = '__none__';   // sentinel for empty/null team
+
 let currentPhase = 'cocktails';
+let currentTeam = null;             // null = no team filter; NO_ASSIGNMENT = "No Assignment" group; otherwise team name
 
-// Read phase from URL hash if present (e.g. /staff#dinner)
-const hashPhase = location.hash.replace('#', '');
-if (['cocktails', 'dinner', 'founders'].includes(hashPhase)) {
-  currentPhase = hashPhase;
-  document.querySelectorAll('.phase-tab').forEach(t => {
-    t.classList.toggle('active', t.dataset.phase === currentPhase);
-  });
+// ----- URL state -----
+function readURLState() {
+  // Support either ?phase=…&team=… or legacy #dinner
+  const params = new URLSearchParams(location.search);
+  const hash = location.hash.replace('#', '');
+  const phase = params.get('phase') || (['cocktails','dinner','founders'].includes(hash) ? hash : 'cocktails');
+  const team = params.get('team');
+  return { phase, team };
 }
 
-const staffSearchEl = document.getElementById('staffSearch');
+function writeURLState() {
+  const params = new URLSearchParams();
+  params.set('phase', currentPhase);
+  if (currentTeam) params.set('team', currentTeam);
+  history.replaceState(null, '', '/staff?' + params.toString());
+}
+
+const initial = readURLState();
+currentPhase = initial.phase;
+currentTeam = initial.team;
 document.querySelectorAll('.phase-tab').forEach(t => {
-  t.addEventListener('click', () => {
-    document.querySelectorAll('.phase-tab').forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-    currentPhase = t.dataset.phase;
-    history.replaceState(null, '', '/staff#' + currentPhase);
-    renderStaffList();
-  });
+  t.classList.toggle('active', t.dataset.phase === currentPhase);
 });
-staffSearchEl.addEventListener('input', renderStaffList);
 
+// ----- helpers -----
 function teamFor(s, phase) { return s[phase + '_team'] || ''; }
-function roleFor(s, phase) { return s[phase + '_role'] || ''; }
-
-function slugify(name) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+function teamKeyFor(s, phase) {
+  const t = teamFor(s, phase);
+  return t ? t : NO_ASSIGNMENT;
 }
+function teamLabelFor(key) { return key === NO_ASSIGNMENT ? 'No Assignment' : key; }
+function roleFor(s, phase) { return s[phase + '_role'] || ''; }
+function slugify(name) { return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+function esc(s) {
+  if (s == null) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ----- team filter pills -----
+function buildTeamFilter() {
+  // Collect teams in the current phase, with counts
+  const counts = {};
+  for (const s of DATA.staff) {
+    const k = teamKeyFor(s, currentPhase);
+    counts[k] = (counts[k] || 0) + 1;
+  }
+  // Sort: real teams alphabetically, "No Assignment" last
+  const teams = Object.keys(counts)
+    .filter(k => k !== NO_ASSIGNMENT)
+    .sort((a, b) => a.localeCompare(b));
+  if (counts[NO_ASSIGNMENT]) teams.push(NO_ASSIGNMENT);
+
+  const allCount = DATA.staff.length;
+  const pills = [
+    `<button class="team-pill ${currentTeam === null ? 'active' : ''}" data-team-key="">All <span class="count">${allCount}</span></button>`,
+  ];
+  for (const k of teams) {
+    const isActive = currentTeam === k;
+    pills.push(
+      `<button class="team-pill ${isActive ? 'active' : ''}" data-team-key="${esc(k)}">${esc(teamLabelFor(k))} <span class="count">${counts[k]}</span></button>`
+    );
+  }
+  document.getElementById('teamFilter').innerHTML = pills.join('');
+}
+
+// Reset team filter if the chosen team doesn't exist in the new phase
+function ensureTeamValid() {
+  if (!currentTeam) return;
+  const exists = DATA.staff.some(s => teamKeyFor(s, currentPhase) === currentTeam);
+  if (!exists) currentTeam = null;
+}
+
+// ----- main render -----
+const staffSearchEl = document.getElementById('staffSearch');
 
 function renderStaffList() {
+  ensureTeamValid();
+  buildTeamFilter();
+
   const q = staffSearchEl.value.trim().toLowerCase();
   let list = DATA.staff.slice();
+  if (currentTeam) {
+    list = list.filter(s => teamKeyFor(s, currentPhase) === currentTeam);
+  }
   if (q) {
     list = list.filter(s => {
       const hay = (s.name + ' ' + roleFor(s, currentPhase) + ' ' + teamFor(s, currentPhase)).toLowerCase();
       return hay.includes(q);
     });
   }
+
   const container = document.getElementById('staffResults');
   document.getElementById('resultsCount').textContent =
     list.length + (list.length === 1 ? ' person' : ' people');
+
   if (list.length === 0) {
-    container.innerHTML = '<div class="empty">No matches. Try a different search.</div>';
+    container.innerHTML = '<div class="empty">No matches. Try a different filter or search.</div>';
     return;
   }
+
   container.innerHTML = list.map(s => {
     const role = roleFor(s, currentPhase) || 'No assignment';
-    const team = teamFor(s, currentPhase);
+    const teamKey = teamKeyFor(s, currentPhase);
+    const teamLabel = teamLabelFor(teamKey);
     const isOff = role === 'No assignment';
-    const teamChip = team ? `<span class="chip gold">${esc(team)}</span>` : '';
-    const offChip = isOff ? '<span class="chip muted">Off this phase</span>' : '';
+    const teamChip = teamKey
+      ? `<button class="chip gold team-chip" data-team-key="${esc(teamKey)}">${esc(teamLabel)}</button>`
+      : '';
+    const offChip = isOff && teamKey === NO_ASSIGNMENT ? '<span class="chip muted">Off this phase</span>' : '';
     const roleClass = isOff ? 'role dim' : 'role';
     const slug = slugify(s.name);
     return `
-      <a class="staff-card" href="/staff/${encodeURIComponent(slug)}/">
+      <div class="staff-card" data-href="/staff/${encodeURIComponent(slug)}/">
         <div class="name">${esc(s.name)}</div>
         <div class="${roleClass}">${esc(role)}</div>
         <div class="meta">${teamChip}${offChip}</div>
-      </a>
+      </div>
     `;
   }).join('');
 }
 
-function esc(s) {
-  if (s == null) return '';
-  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
+// ----- event wiring -----
+document.querySelectorAll('.phase-tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.phase-tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    currentPhase = t.dataset.phase;
+    writeURLState();
+    renderStaffList();
+  });
+});
+
+staffSearchEl.addEventListener('input', renderStaffList);
+
+// Team filter pill clicks (event delegation)
+document.getElementById('teamFilter').addEventListener('click', (e) => {
+  const btn = e.target.closest('.team-pill');
+  if (!btn) return;
+  const key = btn.dataset.teamKey;
+  currentTeam = key === '' ? null : key;
+  writeURLState();
+  renderStaffList();
+});
+
+// Staff card and team-chip clicks (event delegation)
+document.getElementById('staffResults').addEventListener('click', (e) => {
+  // Team chip clicked → set team filter, stay on page
+  const chip = e.target.closest('.team-chip');
+  if (chip) {
+    e.preventDefault();
+    e.stopPropagation();
+    currentTeam = chip.dataset.teamKey;
+    writeURLState();
+    renderStaffList();
+    // Scroll to top so the user sees the filtered list
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
+  }
+  // Card body clicked → navigate to person's detail page
+  const card = e.target.closest('.staff-card');
+  if (card?.dataset.href) {
+    location.href = card.dataset.href;
+  }
+});
 
 renderStaffList();
 </script>

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/data.js"></script>
 </head>
 <body>
 <div class="app">
@@ -22,13 +23,18 @@
     <div class="ornament"></div>
   </section>
 
-  <a href="/staff" class="quick-find">
+  <div class="quick-find" id="quickFind">
     <span class="icon">⚡</span>
-    <div class="text">
-      <strong>Quick find</strong>
-      <span>Jump to any teammate's assignment</span>
-    </div>
-  </a>
+    <input
+      class="quick-find-input"
+      id="quickFindInput"
+      placeholder="Quick find — type a name…"
+      autocomplete="off"
+      autocapitalize="words"
+      aria-label="Quick find a teammate"
+    >
+    <ul class="quick-find-results" id="quickFindResults" hidden></ul>
+  </div>
 
   <nav class="menu">
     <a href="/staff" class="menu-item">
@@ -41,19 +47,19 @@
       <div class="label">Run of Show<span class="desc">Phase-by-phase timing</span></div>
       <span class="arrow">→</span>
     </a>
-    <a href="/faqs" class="menu-item">
+    <a href="/walkies" class="menu-item">
       <span class="num">03</span>
+      <div class="label">Walkie Channels & Protocol<span class="desc">Channel list, escalation paths</span></div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="/faqs" class="menu-item">
+      <span class="num">04</span>
       <div class="label">FAQs<span class="desc">Logistics, conduct, emergencies</span></div>
       <span class="arrow">→</span>
     </a>
     <a href="/leads" class="menu-item">
-      <span class="num">04</span>
-      <div class="label">Key Contacts<span class="desc">Team leads, tap to call</span></div>
-      <span class="arrow">→</span>
-    </a>
-    <a href="/walkies" class="menu-item">
       <span class="num">05</span>
-      <div class="label">Walkie Channels & Protocol<span class="desc">Channel list, escalation paths</span></div>
+      <div class="label">Key Contacts<span class="desc">Team leads, tap to call</span></div>
       <span class="arrow">→</span>
     </a>
   </nav>
@@ -63,5 +69,108 @@
     Issues with this page? Email <a href="mailto:joanna.lin@goldhouse.org">joanna.lin@goldhouse.org</a>
   </div>
 </div>
+
+<script>
+(function() {
+  const input = document.getElementById('quickFindInput');
+  const results = document.getElementById('quickFindResults');
+  const wrap = document.getElementById('quickFind');
+  if (!input || !window.GG_DATA) return;
+
+  function slugify(name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  }
+  function esc(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  // Build a sorted list of {name, slug} once
+  const ALL = window.GG_DATA.staff
+    .map(s => ({ name: s.name, slug: slugify(s.name) }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  let activeIdx = -1;
+  let matches = [];
+
+  function highlight(text, q) {
+    if (!q) return esc(text);
+    const idx = text.toLowerCase().indexOf(q.toLowerCase());
+    if (idx === -1) return esc(text);
+    return esc(text.slice(0, idx)) + '<mark>' + esc(text.slice(idx, idx + q.length)) + '</mark>' + esc(text.slice(idx + q.length));
+  }
+
+  function render() {
+    if (matches.length === 0) {
+      results.hidden = true;
+      results.innerHTML = '';
+      wrap.classList.remove('open');
+      return;
+    }
+    const q = input.value.trim();
+    results.innerHTML = matches.map((m, i) =>
+      `<li class="qf-result ${i === activeIdx ? 'active' : ''}" data-slug="${esc(m.slug)}">${highlight(m.name, q)}</li>`
+    ).join('');
+    results.hidden = false;
+    wrap.classList.add('open');
+  }
+
+  function update() {
+    const q = input.value.trim().toLowerCase();
+    if (!q) {
+      matches = [];
+      activeIdx = -1;
+      render();
+      return;
+    }
+    matches = ALL.filter(s => s.name.toLowerCase().includes(q)).slice(0, 8);
+    activeIdx = matches.length > 0 ? 0 : -1;
+    render();
+  }
+
+  function navigateTo(slug) {
+    if (slug) location.href = '/staff/' + encodeURIComponent(slug);
+  }
+
+  input.addEventListener('input', update);
+  input.addEventListener('focus', () => { if (matches.length) render(); });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (matches.length === 0) return;
+      activeIdx = (activeIdx + 1) % matches.length;
+      render();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (matches.length === 0) return;
+      activeIdx = (activeIdx - 1 + matches.length) % matches.length;
+      render();
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeIdx >= 0 && matches[activeIdx]) navigateTo(matches[activeIdx].slug);
+    } else if (e.key === 'Escape') {
+      input.blur();
+      matches = [];
+      render();
+    }
+  });
+
+  results.addEventListener('mousedown', (e) => {
+    const li = e.target.closest('.qf-result');
+    if (!li) return;
+    e.preventDefault();    // keep focus on input
+    navigateTo(li.dataset.slug);
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!wrap.contains(e.target)) {
+      matches = [];
+      render();
+    }
+  });
+})();
+</script>
 </body>
 </html>
