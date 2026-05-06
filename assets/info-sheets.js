@@ -4622,7 +4622,7 @@ window.GG_INFO_SHEETS = {
   "mikkoh-chen":
   {
     "role_title": "",
-    "staff_call_time": "11:00 AM",
+    "staff_call_time": "1:00 PM",
     "assignments": [
       {
         "phase": "Pre-Event",
