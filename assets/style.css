@@ -935,3 +935,270 @@ details.faq .answer a {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ============================================================================
+   INFO-SHEET (per-person rich layout) — Phase 4
+   ============================================================================ */
+
+/* Non-clickable staff card (full-time staff w/o info sheet) */
+.staff-card.no-link {
+  cursor: default;
+  opacity: 0.78;
+}
+.staff-card.no-link:hover {
+  border-color: var(--border);
+  transform: none;
+}
+
+/* Role-title eyebrow under person's name */
+.detail-hero .role-title-eyebrow {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* Top nav: Before You Arrive / Day-of Professionalism */
+.info-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 22px;
+  margin: 4px 0 26px;
+}
+.info-nav-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 14px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s, background 0.15s;
+}
+.info-nav-btn:hover { border-color: var(--gold-deep); background: var(--bg-elev-2); }
+.info-nav-label {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold-bright);
+}
+.info-nav-sub {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+
+/* Section heading inside the detail page */
+.info-h {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 28px 22px 8px;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.info-sub {
+  padding: 0 22px;
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+/* Tables (timeline + assignments) */
+.info-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 22px;
+}
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 0 22px 8px;
+  width: calc(100% - 44px);
+}
+.info-table-wrap .info-table { margin: 0; min-width: 560px; }
+.info-table thead th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 700;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-strong);
+  background: rgba(255, 255, 255, 0.015);
+}
+.info-table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.45;
+  color: var(--text);
+}
+.info-table tbody tr:last-child td { border-bottom: none; }
+.info-table .t-time { color: var(--gold-bright); font-weight: 600; white-space: nowrap; }
+.info-table .t-phase { font-weight: 600; white-space: nowrap; }
+
+/* Assignments table: stacked Phase/Time in first column */
+.info-table.assignments-table { table-layout: auto; }
+.info-table .t-phase-cell { white-space: nowrap; }
+.info-table .t-phase-cell .t-phase { font-size: 13px; font-weight: 600; color: var(--text); }
+.info-table .t-phase-cell .t-time {
+  font-size: 11px;
+  color: var(--gold-bright);
+  font-weight: 600;
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+/* Tighter padding on assignments table since it has more columns */
+.info-table.assignments-table tbody td,
+.info-table.assignments-table thead th { padding: 10px 8px; font-size: 12.5px; }
+
+.info-notes {
+  margin: 6px 22px 0;
+  padding-left: 20px;
+}
+.info-notes li {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+
+/* Role description blocks */
+.role-block {
+  margin: 6px 22px 18px;
+  padding: 16px 18px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.role-block .role-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-bright);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.role-block .role-summary {
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0 0 14px;
+  color: var(--text);
+}
+.role-block .role-sub {
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  color: var(--gold-bright);
+  font-weight: 700;
+  margin: 16px 0 6px;
+}
+.role-block p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0 0 4px;
+  color: var(--text);
+}
+.role-block ul.protocol-list {
+  margin: 4px 0 0;
+  padding-left: 22px;
+}
+.role-block ul.protocol-list li {
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.role-block ul.protocol-list li::marker {
+  color: var(--gold);
+}
+.role-block ul.protocol-list strong { color: var(--gold-bright); }
+
+/* Additional Key Contacts list */
+.contact-list { padding: 4px 22px 0; }
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 2px 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.contact-row:last-child { border-bottom: none; }
+.contact-name {
+  grid-column: 1;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+}
+.contact-role {
+  grid-column: 1;
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+.contact-phone {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  color: var(--gold-bright);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200, 156, 63, 0.4);
+}
+
+/* Break pill */
+.break-pill {
+  margin: 0 22px 12px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, var(--gold-soft) 0%, rgba(42, 31, 8, 0.4) 100%);
+  border: 1px solid rgba(200, 156, 63, 0.3);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text);
+}
+.break-pill strong { color: var(--gold-bright); }
+
+.info-bullets {
+  margin: 0 22px;
+  padding-left: 38px;
+}
+.info-bullets li {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+
+/* Generic in-content link styling reused on Questions section */
+.text-link,
+.lead-link {
+  color: var(--gold-bright);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200, 156, 63, 0.4);
+  transition: color 0.15s, border-color 0.15s;
+}
+.text-link:hover,
+.lead-link:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* Make .info-h not animate (it's nested inside the existing fadeUp targets) */
+.info-h, .role-block, .info-table-wrap, .info-table, .info-nav,
+.contact-list, .break-pill, .info-bullets, .info-notes, .info-sub {
+  animation: none;
+}

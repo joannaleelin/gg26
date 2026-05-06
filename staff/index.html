@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <script src="/assets/data.js"></script>
+<script src="/assets/info-sheets.js"></script>
 </head>
 <body>
 <div class="app">
@@ -38,6 +39,7 @@
 
 <script>
 const DATA = window.GG_DATA;
+const SHEETS = window.GG_INFO_SHEETS || {};
 let currentPhase = 'cocktails';
 
 // Read phase from URL hash if present (e.g. /staff#dinner)
@@ -91,13 +93,16 @@ function renderStaffList() {
     const teamChip = team ? `<span class="chip gold">${esc(team)}</span>` : '';
     const offChip = isOff ? '<span class="chip muted">Off this phase</span>' : '';
     const roleClass = isOff ? 'role dim' : 'role';
-    return `
-      <a class="staff-card" href="/staff/${encodeURIComponent(slugify(s.name))}/">
-        <div class="name">${esc(s.name)}</div>
-        <div class="${roleClass}">${esc(role)}</div>
-        <div class="meta">${teamChip}${offChip}</div>
-      </a>
+    const slug = slugify(s.name);
+    const hasInfo = !!SHEETS[slug];
+    const inner = `
+      <div class="name">${esc(s.name)}</div>
+      <div class="${roleClass}">${esc(role)}</div>
+      <div class="meta">${teamChip}${offChip}</div>
     `;
+    return hasInfo
+      ? `<a class="staff-card" href="/staff/${encodeURIComponent(slug)}/">${inner}</a>`
+      : `<div class="staff-card no-link">${inner}</div>`;
   }).join('');
 }
 
