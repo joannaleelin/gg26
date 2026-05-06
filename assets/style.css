@@ -940,16 +940,6 @@ details.faq .answer a {
    INFO-SHEET (per-person rich layout) — Phase 4
    ============================================================================ */
 
-/* Non-clickable staff card (full-time staff w/o info sheet) */
-.staff-card.no-link {
-  cursor: default;
-  opacity: 0.78;
-}
-.staff-card.no-link:hover {
-  border-color: var(--border);
-  transform: none;
-}
-
 /* Role-title eyebrow under person's name */
 .detail-hero .role-title-eyebrow {
   margin-top: 4px;
