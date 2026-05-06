@@ -149,11 +149,14 @@ function assignmentsHTML(info) {
 
 function rolesHTML(info) {
   const blocks = (info.role_descriptions || []).map(r => {
-    const partner = renderPartner(r.partner_info);
-    const guest = renderGuest(r.guest_info);
-    const what = (r.what_youll_do || []).length
-      ? `<div class="role-sub">What you'll do</div><ul class="protocol-list">${r.what_youll_do.map(x => `<li>${esc(x)}</li>`).join('')}</ul>`
-      : '';
+    const sectionsHTML = (r.sections || []).map(sec => {
+      const inner = sec.items
+        ? `<ul class="protocol-list">${sec.items.map(it => `<li>${esc(it)}</li>`).join('')}</ul>`
+        : sec.body
+          ? `<p>${esc(sec.body)}</p>`
+          : '';
+      return `<div class="role-sub">${esc(sec.heading)}</div>${inner}`;
+    }).join('');
     const lead = r.lead_name
       ? `<div class="role-sub">Your Lead</div>
          <p>${esc(r.lead_name)}${r.lead_tel ? ` &middot; <a class="lead-link" href="tel:${r.lead_tel}">${esc(r.lead_phone)}</a>` : ''}</p>`
@@ -161,10 +164,7 @@ function rolesHTML(info) {
     return `
       <div class="role-block">
         <div class="role-title">${esc(r.title)}</div>
-        ${r.summary ? `<p class="role-summary">${esc(r.summary)}</p>` : ''}
-        ${what}
-        ${partner}
-        ${guest}
+        ${sectionsHTML}
         ${lead}
       </div>
     `;
@@ -173,28 +173,6 @@ function rolesHTML(info) {
     ? `<p class="info-sub">You hold different roles across phases. Each role description is included below.</p>`
     : `<p class="info-sub">You hold the same role across multiple phases. The description below applies to all assigned phases.</p>`;
   return `<h3 class="info-h">Your Role(s)</h3>${intro}${blocks}`;
-}
-
-function renderPartner(p) {
-  if (!p) return '';
-  if (typeof p === 'string') {
-    return `<div class="role-sub">Important partner info</div><p>${esc(p)}</p>`;
-  }
-  return `
-    <div class="role-sub">${esc(p.heading || 'Important partner info')}</div>
-    <ul class="protocol-list">${(p.items || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-  `;
-}
-
-function renderGuest(g) {
-  if (!g) return '';
-  if (typeof g === 'string') {
-    return `<div class="role-sub">Important guest info</div><p>${esc(g)}</p>`;
-  }
-  return `
-    <div class="role-sub">Important guest info</div>
-    <ul class="protocol-list">${g.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-  `;
 }
 
 function contactsHTML(contacts) {
