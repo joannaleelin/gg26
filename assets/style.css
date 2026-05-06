@@ -122,6 +122,15 @@ body::before {
   margin-right: 2px;
 }
 
+.topbar.topbar-home {
+  justify-content: center;
+}
+.topbar .brand-logo {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+
 /* ============================================================================
    HERO (home page)
    ============================================================================ */
@@ -176,6 +185,11 @@ body::before {
   font-style: italic;
   font-weight: 500;
   margin-top: 4px;
+}
+.hero h1 .accent {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 500;
 }
 
 .hero .sub {
