@@ -2,8 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/staff/:name", "destination": "/staff/_detail.html" },
-    { "source": "/staff/:name/", "destination": "/staff/_detail.html" }
+    { "source": "/staff/(.+)", "destination": "/staff/_detail.html" }
   ],
   "headers": [
     {
