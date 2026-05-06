@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/staff/:name", "destination": "/staff/[name].html" },
+    { "source": "/staff/:name/", "destination": "/staff/[name].html" }
+  ]
+}

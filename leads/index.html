@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#050505">
+<title>Key Contacts · GG26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/data.js"></script>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a class="back" href="/" aria-label="Back to home">←</a>
+    <span class="title">Key Contacts</span>
+  </header>
+
+  <div class="page-content">
+    <h2 class="section-h">Key Contacts</h2>
+    <p class="section-sub">Tap the gold button to call</p>
+
+    <div class="callout">
+      <div class="label">Backup escalation</div>
+      <div class="body">Can't reach your lead? Call Joanna Lin at <a href="tel:+17346746795">734-674-6795</a></div>
+    </div>
+
+    <div id="leadsContent"></div>
+  </div>
+</div>
+
+<script>
+const DATA = window.GG_DATA;
+
+function esc(s) {
+  if (s == null) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+const byName = new Map();
+DATA.leads.forEach(l => {
+  if (!byName.has(l.name)) byName.set(l.name, { ...l, teams: [l.team] });
+  else byName.get(l.name).teams.push(l.team);
+});
+const grouped = Array.from(byName.values()).sort((a,b) => a.name.localeCompare(b.name));
+
+document.getElementById('leadsContent').innerHTML = grouped.map(l => `
+  <div class="lead-card">
+    <div class="left">
+      <div class="team">${esc(l.teams.join(' · '))}</div>
+      <div class="name">${esc(l.name)}</div>
+      <div class="phone">${esc(l.phone)}</div>
+    </div>
+    ${l.phone_tel ? `<a class="call-btn" href="tel:${l.phone_tel}" aria-label="Call ${esc(l.name)}">📞</a>` : ''}
+  </div>
+`).join('');
+</script>
+</body>
+</html>

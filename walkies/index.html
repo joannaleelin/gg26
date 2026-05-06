@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#050505">
+<title>Walkies & Protocol · GG26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/data.js"></script>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a class="back" href="/" aria-label="Back to home">←</a>
+    <span class="title">Walkies & Protocol</span>
+  </header>
+
+  <div class="page-content">
+    <h2 class="section-h">Walkie Channels</h2>
+    <p class="section-sub">For leads on radio comms with Sequoia</p>
+
+    <div class="callout">
+      <div class="label">Security escalation</div>
+      <div class="body">Channel <strong>16</strong> reaches Mara Girvin (Sequoia liaison to APEX Security & LAPD): <a href="tel:+12064657011">206-465-7011</a></div>
+    </div>
+
+    <div id="walkiesContent"></div>
+
+    <h2 class="section-h" style="margin-top: 36px">Comms Protocol</h2>
+
+    <div class="callout">
+      <div class="label">If you're a lead</div>
+      <div class="body">Bring a belt, pouch, or pockets to clip the radio. Each role group also has a WhatsApp channel, and there's a full-group escalation thread for major concerns.</div>
+    </div>
+
+    <div class="callout">
+      <div class="label">Escalation order</div>
+      <div class="body">1. Your team lead → 2. Joanna Lin (<a href="tel:+17346746795">734-674-6795</a>) → 3. Rose Yan on-site for lead escalations</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = window.GG_DATA;
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+document.getElementById('walkiesContent').innerHTML = '<div class="walkie-list">' +
+  DATA.walkies.map(w => {
+    const m = w.match(/^(\d+)\s*-\s*(.+)$/);
+    if (m) return `<div class="walkie-item"><span class="walkie-num">${m[1]}</span><span class="walkie-label">${esc(m[2])}</span></div>`;
+    return `<div class="walkie-item"><span class="walkie-num">—</span><span class="walkie-label">${esc(w)}</span></div>`;
+  }).join('') + '</div>';
+</script>
+</body>
+</html>
