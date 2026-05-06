@@ -681,6 +681,61 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
+  // Ananya Mishra
+  "ananya-mishra":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Social Team Floater",
+        "location": "—",
+        "role_leader": "Joseph Kim — (201) 693-7482"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Social Team Floater",
+        "location": "—",
+        "role_leader": "Joseph Kim — (201) 693-7482"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Social Team Floater",
+        "location": "—",
+        "role_leader": "Joseph Kim — (201) 693-7482"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
   // Ariana Deng
   "ariana-deng":
   {
@@ -766,6 +821,116 @@ window.GG_INFO_SHEETS = {
       }
     ],
     "ideal_break": "Box meal backstage (as you’ll be backstage during programming, you can take your break backstage. Maiqi will also be backstage with you, so please coordinate with her for coverage!)",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Bing Chen
+  "bing-chen":
+  {
+    "role_title": "",
+    "staff_call_time": "",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Float",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Float",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Float",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Brian Tao
+  "brian-tao":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Teleprompter Backstage at JMP - Green Room (Abernathy)",
+        "location": "—",
+        "role_leader": "Linda Ngay — (714) 356-6853"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Teleprompter Backstage at JMP - Green Room (Abernathy)",
+        "location": "—",
+        "role_leader": "Linda Ngay — (714) 356-6853"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "Box meal backstage",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -887,6 +1052,61 @@ window.GG_INFO_SHEETS = {
       }
     ],
     "ideal_break": "Talent Team breaks will need to be worked out with Lorrie. You will have a box meal backstage",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Caro Delfin
+  "caro-delfin":
+  {
+    "role_title": "",
+    "staff_call_time": "10:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "VIP Check-In Lead at Grand Ave",
+        "location": "—",
+        "role_leader": "Caro Delfin — (224) 345-8309"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Move to Hope St. Founders Party Check-in at 9 PM",
+        "location": "—",
+        "role_leader": "Caro Delfin — (224) 345-8309"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Founders Check-In Lead at Hope St",
+        "location": "—",
+        "role_leader": "Caro Delfin — (224) 345-8309"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -1231,6 +1451,61 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
+  // Cindy Guo
+  "cindy-guo":
+  {
+    "role_title": "",
+    "staff_call_time": "1:00 PM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "GA Check-in at Hope St.",
+        "location": "—",
+        "role_leader": "Chiharu Iijima — (817) 487-1574"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Move to Gifting at 9 PM",
+        "location": "—",
+        "role_leader": "Linda Chu — (860) 398-0834"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Gifting - Escalation",
+        "location": "—",
+        "role_leader": "Linda Chu — (860) 398-0834"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
   // Courtney Yang
   "courtney-yang":
   {
@@ -1409,6 +1684,61 @@ window.GG_INFO_SHEETS = {
         "lead_tel": "+12016937482"
       }
     ],
+    "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Daniel Suh
+  "daniel-suh":
+  {
+    "role_title": "",
+    "staff_call_time": "12:00 PM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "NASDAQ Content Studio",
+        "location": "—",
+        "role_leader": "Daniel Suh — (818) 306-7586"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Wrap-up",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
     "ideal_break": "7:00 - 7:45 PM",
     "additional_contacts": STANDARD_CONTACTS
   },
@@ -1842,6 +2172,61 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
+  // Indu Damodar
+  "indu-damodar":
+  {
+    "role_title": "",
+    "staff_call_time": "2:00 PM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Partnerships - Float",
+        "location": "—",
+        "role_leader": "Jeffrey Delfin — (516) 504-5897"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Partnerships Float at DCP - Founders Party - 1st & 2nd FL",
+        "location": "—",
+        "role_leader": "Jeffrey Delfin — (516) 504-5897"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Partnership Activation Lead at DCP - Founders Party - 1st & 2nd FL",
+        "location": "—",
+        "role_leader": "Jeffrey Delfin — (516) 504-5897"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:45 - 8:30 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
   // Janine Carpena
   "janine-carpena":
   {
@@ -1918,6 +2303,226 @@ window.GG_INFO_SHEETS = {
       }
     ],
     "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Jeffrey Delfin
+  "jeffrey-delfin":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Partnerships Lead - Float",
+        "location": "—",
+        "role_leader": "Jeffrey Delfin — (516) 504-5897"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Partnerships Lead at DCP - Founders Party - 1st & 2nd FL",
+        "location": "—",
+        "role_leader": "Jeffrey Delfin — (516) 504-5897"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Karaoke Partnership Activation Lead at Founders/Karaoke Room",
+        "location": "—",
+        "role_leader": "Jeffrey Delfin — (516) 504-5897"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Jenna Frank
+  "jenna-frank":
+  {
+    "role_title": "",
+    "staff_call_time": "1:00 PM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Social - Glambot",
+        "location": "—",
+        "role_leader": "Joseph Kim — (201) 693-7482"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Social - Program until 8 PM",
+        "location": "—",
+        "role_leader": "Joseph Kim — (201) 693-7482"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:45 - 8:30 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Jenny Suh
+  "jenny-suh":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "VOG at JMP - FOH",
+        "location": "—",
+        "role_leader": "Linda Ngay — (714) 356-6853"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "VOG at JMP - FOH",
+        "location": "—",
+        "role_leader": "Linda Ngay — (714) 356-6853"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "Box meal delivered",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Jeremy Tran
+  "jeremy-tran":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Greeter at Grand Ave Check-In",
+        "location": "—",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Float",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Float",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "Box meal backstage",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -2014,6 +2619,61 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
+  // Joanna Lin
+  "joanna-lin":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Staffing Manager at DCP - GH Prod Office 5th FL",
+        "location": "—",
+        "role_leader": "Joanna Lin — (734) 674-6795"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Staffing Manager at DCP - GH Prod Office 5th FL",
+        "location": "—",
+        "role_leader": "Joanna Lin — (734) 674-6795"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Staffing Manager at DCP - GH Prod Office 5th FL",
+        "location": "—",
+        "role_leader": "Joanna Lin — (734) 674-6795"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
   // Joanne DO
   "joanne-do":
   {
@@ -2099,6 +2759,61 @@ window.GG_INFO_SHEETS = {
       }
     ],
     "ideal_break": "6:30 - 7:00 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Joseph Kim
+  "joseph-kim":
+  {
+    "role_title": "",
+    "staff_call_time": "1:00 PM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Social - Float",
+        "location": "—",
+        "role_leader": "Joseph Kim — (201) 693-7482"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Social - Float",
+        "location": "—",
+        "role_leader": "Joseph Kim — (201) 693-7482"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Social - Float",
+        "location": "—",
+        "role_leader": "Joseph Kim — (201) 693-7482"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -3259,6 +3974,171 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
+  // Linda Chu
+  "linda-chu":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Production Lead",
+        "location": "—",
+        "role_leader": "Linda Chu — (860) 398-0834"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Gifting Area Lead at Grand Ave",
+        "location": "—",
+        "role_leader": "Linda Chu — (860) 398-0834"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Gifting Area Lead at Grand Ave - Gifting",
+        "location": "—",
+        "role_leader": "Linda Chu — (860) 398-0834"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Linda Ngay
+  "linda-ngay":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Programming Manager at JMP - FOH",
+        "location": "—",
+        "role_leader": "Linda Ngay — (714) 356-6853"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Programming Manager at JMP - FOH",
+        "location": "—",
+        "role_leader": "Linda Ngay — (714) 356-6853"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "Box meal delivered",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Lorrie Chan
+  "lorrie-chan":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Grand Ave Talent Check-in Manager",
+        "location": "—",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Backstage Talent Manager at JMP - Green Room (Abernathy)",
+        "location": "—",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Departures Manager at DCP - VIP Departures",
+        "location": "—",
+        "role_leader": "Amanda Tran — (909) 702-1497"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "Box meal backstage",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
   // Lucia Knell
   "lucia-knell":
   {
@@ -3377,6 +4257,61 @@ window.GG_INFO_SHEETS = {
       }
     ],
     "ideal_break": "Talent Team breaks will need to be worked out with Lorrie. You will have a box meal backstage",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Lucy Khuu
+  "lucy-khuu":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Grand Ave and Hope St in-between at   Gold Carpet (Start closer to Grand)",
+        "location": "—",
+        "role_leader": "Lucy Khuu — (408) 666-6114"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Move to Gifting at 9 PM",
+        "location": "—",
+        "role_leader": "Linda Chu — (860) 398-0834"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Gifting Distributor (hand to guest) at Grand Ave - Gifting",
+        "location": "—",
+        "role_leader": "Linda Chu — (860) 398-0834"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -3683,6 +4618,61 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
+  // Mikkoh Chen
+  "mikkoh-chen":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "VIP Check-In at Grand Ave (Top of Stairs)",
+        "location": "—",
+        "role_leader": "Caro Delfin — (224) 345-8309"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
   // Pooja Kumar
   "pooja-kumar":
   {
@@ -3907,6 +4897,61 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
+  // Roc Su
+  "roc-su":
+  {
+    "role_title": "",
+    "staff_call_time": "12:00 PM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Dedicated Jet Li Handler at Grand Ave - Talent Check-In",
+        "location": "—",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Dedicated Jet Li Handler at JMP - Stage",
+        "location": "—",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Dedicated Jet Li Handler at DCP - VIP Departures",
+        "location": "—",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "Box meal backstage",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
   // Rosalie Escobar
   "rosalie-escobar":
   {
@@ -4027,6 +5072,61 @@ window.GG_INFO_SHEETS = {
       }
     ],
     "ideal_break": "7:45 - 8:30 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Rose Yan
+  "rose-yan":
+  {
+    "role_title": "",
+    "staff_call_time": "",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Float",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Float",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Float",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -4737,6 +5837,61 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
+  // Surya Garg
+  "surya-garg":
+  {
+    "role_title": "",
+    "staff_call_time": "2:00 PM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "GA Check-in at Hope St. & Escort for NASDAQ Studio",
+        "location": "—",
+        "role_leader": "Chiharu Iijima — (817) 487-1574"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Move to Hope St. Founders Party Check-in at 9 PM",
+        "location": "—",
+        "role_leader": "Caro Delfin — (224) 345-8309"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "Founders Check-In at Hope St",
+        "location": "—",
+        "role_leader": "Caro Delfin — (224) 345-8309"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
   // Ted Wint
   "ted-wint":
   {
@@ -4843,6 +5998,61 @@ window.GG_INFO_SHEETS = {
       }
     ],
     "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Tiffany Chao
+  "tiffany-chao":
+  {
+    "role_title": "",
+    "staff_call_time": "2:00 PM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Content Studio Manager at DCP - VIP Portraits",
+        "location": "—",
+        "role_leader": "Tiffany Chao — (310) 938-2957"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Content Studio Manager at DCP - VIP Portraits",
+        "location": "—",
+        "role_leader": "Tiffany Chao — (310) 938-2957"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "7:45 - 8:30 PM",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -5366,6 +6576,61 @@ window.GG_INFO_SHEETS = {
       }
     ],
     "ideal_break": "7:00 - 7:45 PM",
+    "additional_contacts": STANDARD_CONTACTS
+  },
+
+  // Yimu Xue
+  "yimu-xue":
+  {
+    "role_title": "",
+    "staff_call_time": "11:00 AM",
+    "assignments": [
+      {
+        "phase": "Pre-Event",
+        "time": "2:30–4:30 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Cocktails",
+        "time": "4:30–6:30 PM",
+        "role": "Teleprompter FOH at JMP - FOH",
+        "location": "—",
+        "role_leader": "Linda Ngay — (714) 356-6853"
+      },
+      {
+        "phase": "Transition to Dinner",
+        "time": "6:20–7:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Dinner & Program",
+        "time": "7:00–9:30 PM",
+        "role": "Teleprompter FOH at JMP - FOH",
+        "location": "—",
+        "role_leader": "Linda Ngay — (714) 356-6853"
+      },
+      {
+        "phase": "Transition to Afterparty",
+        "time": "~9:30–10:00 PM",
+        "role": "—",
+        "location": "—",
+        "role_leader": "—"
+      },
+      {
+        "phase": "Founders Party",
+        "time": "10:00 PM–1:00 AM",
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
+      }
+    ],
+    "assignment_notes": [],
+    "role_descriptions": [],
+    "ideal_break": "Box meal delivered",
     "additional_contacts": STANDARD_CONTACTS
   },
 

@@ -27,7 +27,10 @@ import json
 import sys
 
 SRC_DIR = "/tmp/gg26-info-sheets-txt"
-OUT = "/Users/joannalin/Dropbox/Repositories/Gold Gala GG26 Staffing/Staffing Repo/assets/info-sheets.js"
+REPO   = "/Users/joannalin/Dropbox/Repositories/Gold Gala GG26 Staffing/Staffing Repo"
+OUT    = os.path.join(REPO, "assets/info-sheets.js")
+DATA_JS  = os.path.join(REPO, "assets/data.js")
+EXCEL_PATH = "/Users/joannalin/Dropbox/Repositories/Gold Gala GG26 Staffing/Reference for Content/Gold Gala 2026 - Day of Staffing Kit.xlsx"
 
 # --- Phase keywords used in YOUR ASSIGNMENTS table ---
 PHASE_NAMES = {
@@ -452,6 +455,122 @@ def js_dump(value, indent=0):
     return json.dumps(value, ensure_ascii=False, indent=2)
 
 
+# ----------------------------------------------------------------
+# FTE entry generation (people without .docx info sheets)
+# ----------------------------------------------------------------
+
+def read_data_js_staff(path):
+    """Pull window.GG_DATA.staff out of data.js as a list of dicts."""
+    src = open(path, "r", encoding="utf-8").read()
+    # Trim 'window.GG_DATA = ' and trailing ';'
+    start = src.find("{")
+    end   = src.rfind("}")
+    obj_text = src[start:end+1]
+    data = json.loads(obj_text)
+    return data["staff"]
+
+
+def read_excel_call_times_and_breaks():
+    """Returns (call_times, ideal_breaks) keyed by lowercased name.
+    Also returns dietary keyed by lowercased name."""
+    import zipfile, xml.etree.ElementTree as ET
+    z = zipfile.ZipFile(EXCEL_PATH)
+    ns = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
+    ss_xml = z.read("xl/sharedStrings.xml").decode()
+    ss_root = ET.fromstring(ss_xml)
+    shared = [
+        "".join((t.text or "") for t in si.iter(f"{ns}t"))
+        for si in ss_root.findall(f"{ns}si")
+    ]
+    def grid(sheet_path):
+        root = ET.fromstring(z.read(sheet_path).decode())
+        rows = []
+        for row in root.findall(f".//{ns}row"):
+            r = {}
+            for c in row.findall(f"{ns}c"):
+                ref = c.attrib.get("r", "")
+                ctype = c.attrib.get("t", "")
+                v = c.find(f"{ns}v")
+                if v is None:
+                    continue
+                val = v.text
+                if ctype == "s":
+                    val = shared[int(val)] if int(val) < len(shared) else ""
+                col = re.match(r"([A-Z]+)", ref).group(1) if ref else ""
+                r[col] = val
+            rows.append(r)
+        return rows
+
+    # Sheet 1 = Roster (ideal break in col H, dietary in col N)
+    roster = grid("xl/worksheets/sheet1.xml")
+    ideal_breaks = {}
+    dietary = {}
+    for row in roster:
+        name = (row.get("B") or "").strip()
+        if not name or name.upper().startswith("GOLD GALA") or name.lower() == "name":
+            continue
+        ideal_breaks[name.lower()] = (row.get("H") or "").strip()
+        dietary[name.lower()] = (row.get("N") or "").strip()
+
+    # Sheet 2 = Check-In (expected arrival in col D)
+    checkin = grid("xl/worksheets/sheet2.xml")
+    call_times = {}
+    for row in checkin:
+        name = (row.get("A") or "").strip()
+        if not name or name.lower() == "name":
+            continue
+        call_times[name.lower()] = (row.get("D") or "").strip()
+    return call_times, ideal_breaks, dietary
+
+
+def normalize_call_time(raw):
+    """'Saturday, May 9 - 12 PM' or 'Saturday May 9 -- 11:30 AM' → '12:00 PM'."""
+    if not raw:
+        return ""
+    m = re.search(r"(\d{1,2}(?::\d{2})?)\s*(AM|PM|am|pm)", raw)
+    if not m:
+        return ""
+    t, ampm = m.group(1), m.group(2).upper()
+    if ":" not in t:
+        t += ":00"
+    return f"{t} {ampm}"
+
+
+def fmt_lead_cell(name, phone):
+    """Build the role_leader cell from data.js fields."""
+    if name and phone:
+        return f"{name} — {phone}"
+    if name:
+        return name
+    return "—"
+
+
+def make_fte_entry(s, call_time_raw, ideal_break):
+    """Build an info-sheet entry from data.js fields + Excel call_time.
+    Used for staff who don't have a personalized .docx info sheet."""
+    name = s["name"]
+    return {
+        "_name": name,
+        "_slug": slugify(name),
+        "role_title": "",
+        "staff_call_time": normalize_call_time(call_time_raw),
+        "assignments": [
+            {"phase": "Pre-Event",                "time": "2:30–4:30 PM",   "role": "—",                                "location": "—", "role_leader": "—"},
+            {"phase": "Cocktails",                "time": "4:30–6:30 PM",   "role": s.get("cocktails_role") or "—",     "location": "—",
+             "role_leader": fmt_lead_cell(s.get("cocktails_lead_name"), s.get("cocktails_lead_phone"))},
+            {"phase": "Transition to Dinner",     "time": "6:20–7:00 PM",   "role": "—",                                "location": "—", "role_leader": "—"},
+            {"phase": "Dinner & Program",         "time": "7:00–9:30 PM",   "role": s.get("dinner_role") or "—",        "location": "—",
+             "role_leader": fmt_lead_cell(s.get("dinner_lead_name"), s.get("dinner_lead_phone"))},
+            {"phase": "Transition to Afterparty", "time": "~9:30–10:00 PM", "role": "—",                                "location": "—", "role_leader": "—"},
+            {"phase": "Founders Party",           "time": "10:00 PM–1:00 AM","role": s.get("founders_role") or "—",     "location": "—",
+             "role_leader": fmt_lead_cell(s.get("founders_lead_name"), s.get("founders_lead_phone"))},
+        ],
+        "assignment_notes": [],
+        "role_descriptions": [],
+        "ideal_break": (ideal_break or "").strip(),
+    }
+
+
 def main():
     files = sorted(os.listdir(SRC_DIR))
     files = [f for f in files if f.endswith(".txt")]
@@ -465,7 +584,33 @@ def main():
             print(f"FAILED {f}: {e}", file=sys.stderr)
             raise
 
-    print(f"Parsed {len(parsed)} files", file=sys.stderr)
+    print(f"Parsed {len(parsed)} .docx files", file=sys.stderr)
+
+    # Now generate FTE entries for staff in data.js but not in .docx-derived parsed list
+    docx_slugs = {e["_slug"] for e in parsed}
+    staff = read_data_js_staff(DATA_JS)
+    call_times, ideal_breaks, dietary = read_excel_call_times_and_breaks()
+
+    fte_entries = []
+    missing_call_times = []
+    for s in staff:
+        slug = slugify(s["name"])
+        if slug in docx_slugs:
+            continue
+        ct_raw = call_times.get(s["name"].lower(), "")
+        ib = ideal_breaks.get(s["name"].lower(), "")
+        if not ct_raw:
+            missing_call_times.append(s["name"])
+        fte_entries.append(make_fte_entry(s, ct_raw, ib))
+
+    print(f"Generated {len(fte_entries)} FTE entries from data.js + Excel", file=sys.stderr)
+    if missing_call_times:
+        print(f"  WARN: no Excel call time for: {missing_call_times}", file=sys.stderr)
+
+    # Combine; dedupe by slug just to be safe; sort by name
+    combined = parsed + fte_entries
+    combined.sort(key=lambda e: e["_name"].lower())
+    parsed = combined
 
     # Build output JS
     out_lines = []

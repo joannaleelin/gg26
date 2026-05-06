@@ -94,9 +94,8 @@ function renderStaffList() {
     const offChip = isOff ? '<span class="chip muted">Off this phase</span>' : '';
     const roleClass = isOff ? 'role dim' : 'role';
     const slug = slugify(s.name);
-    const href = SHEETS[slug] ? `/staff/${encodeURIComponent(slug)}/` : '/gold-house-staff';
     return `
-      <a class="staff-card" href="${href}">
+      <a class="staff-card" href="/staff/${encodeURIComponent(slug)}/">
         <div class="name">${esc(s.name)}</div>
         <div class="${roleClass}">${esc(role)}</div>
         <div class="meta">${teamChip}${offChip}</div>

@@ -148,6 +148,8 @@ function assignmentsHTML(info) {
 }
 
 function rolesHTML(info) {
+  // No role descriptions = FTE-style page; skip the Your Role(s) section entirely.
+  if (!info.role_descriptions || info.role_descriptions.length === 0) return '';
   const blocks = (info.role_descriptions || []).map(r => {
     const sectionsHTML = (r.sections || []).map(sec => {
       const inner = sec.items
@@ -188,10 +190,12 @@ function contactsHTML(contacts) {
 }
 
 function breaksHTML(info) {
+  // Only show Breaks section if there's an ideal break window for this person.
+  if (!info.ideal_break) return '';
   return `
     <h3 class="info-h">Breaks</h3>
     <p class="info-sub">You will get at least one break during the evening to eat, rest, or watch the show. Confirm with your Role Lead before stepping away.</p>
-    ${info.ideal_break ? `<div class="break-pill">Your ideal break: <strong>${esc(info.ideal_break)}</strong></div>` : ''}
+    <div class="break-pill">Your ideal break: <strong>${esc(info.ideal_break)}</strong></div>
     <ul class="protocol-list info-bullets">
       <li>A meal will be provided during the event. Avoid eating or drinking in guest-facing areas during active event hours.</li>
       <li>Coordinate any changes with your Role Lead. If you need to step away unexpectedly, hand off to a teammate first.</li>
