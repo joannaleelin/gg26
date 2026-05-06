@@ -34,7 +34,7 @@ function getSlug() {
   const path = location.pathname.replace(/\/$/, '');
   const parts = path.split('/').filter(Boolean);
   const i = parts.indexOf('staff');
-  if (i >= 0 && parts[i + 1] && !parts[i + 1].endsWith('.html') && parts[i + 1] !== '[name]') {
+  if (i >= 0 && parts[i + 1] && !parts[i + 1].endsWith('.html') && parts[i + 1] !== '_detail') {
     return parts[i + 1];
   }
   const params = new URLSearchParams(location.search);
