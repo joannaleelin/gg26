@@ -2674,7 +2674,7 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
-  // Joanne DO
+  // Joanne Do
   "joanne-do":
   {
     "role_title": "CONTENT/SOCIAL",
@@ -2690,22 +2690,22 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Cocktails",
         "time": "4:30–6:30 PM",
-        "role": "Social - VIP Portrait Lounge",
-        "location": "VIP Portrait Lounge",
+        "role": "Social - Gold Carpet",
+        "location": "Gold Carpet",
         "role_leader": "Joseph Kim — (201) 693-7482"
       },
       {
         "phase": "Transition to Dinner",
         "time": "6:20–7:00 PM",
-        "role": "Break with portrait team (6:30 - 7:00 PM)",
+        "role": "Stay in place",
         "location": "—",
         "role_leader": "—"
       },
       {
         "phase": "Dinner & Program",
         "time": "7:00–9:30 PM",
-        "role": "Social - VIP Portrait Lounge",
-        "location": "VIP Portrait Lounge",
+        "role": "Social - Program until 8 PM",
+        "location": "JMP Program",
         "role_leader": "Joseph Kim — (201) 693-7482"
       },
       {
@@ -2758,7 +2758,7 @@ window.GG_INFO_SHEETS = {
         "lead_tel": "+12016937482"
       }
     ],
-    "ideal_break": "6:30 - 7:00 PM",
+    "ideal_break": "7:45 - 8:30 PM",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -3904,22 +3904,22 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Cocktails",
         "time": "4:30–6:30 PM",
-        "role": "Social - Gold Carpet",
-        "location": "Gold Carpet",
+        "role": "Social - VIP Portrait Lounge",
+        "location": "VIP Portrait Lounge",
         "role_leader": "Joseph Kim — (201) 693-7482"
       },
       {
         "phase": "Transition to Dinner",
         "time": "6:20–7:00 PM",
-        "role": "Stay in place",
+        "role": "Break with portrait team (6:30 - 7:00 PM)",
         "location": "—",
         "role_leader": "—"
       },
       {
         "phase": "Dinner & Program",
         "time": "7:00–9:30 PM",
-        "role": "Social - Program until 8 PM",
-        "location": "JMP Program",
+        "role": "Social - VIP Portrait Lounge",
+        "location": "VIP Portrait Lounge",
         "role_leader": "Joseph Kim — (201) 693-7482"
       },
       {
@@ -3970,7 +3970,7 @@ window.GG_INFO_SHEETS = {
         "lead_tel": "+12016937482"
       }
     ],
-    "ideal_break": "7:45 - 8:30 PM",
+    "ideal_break": "6:30 - 7:00 PM",
     "additional_contacts": STANDARD_CONTACTS
   },
 
