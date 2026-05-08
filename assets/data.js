@@ -1641,8 +1641,8 @@ window.GG_DATA = {
     {
       "name": "Tiffany Hsu",
       "email": "tiffany.hsu@goldhouse.org",
-      "phone": "",
-      "phone_tel": "",
+      "phone": "(310) 428-0393",
+      "phone_tel": "+13104280393",
       "cocktails_role": "Grand Ave and Hope St in-between at   Gold Carpet (Start closer to Grand)",
       "dinner_role": "No assignment",
       "founders_role": "Founders Party VIP Support (10-11 PM)",
