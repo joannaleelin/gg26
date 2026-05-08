@@ -105,6 +105,7 @@ Don't duplicate this content into individual info sheets.
 | `/faqs` | FAQs |
 | `/leads` | Team leads |
 | `/walkies` | Walkie channels + radio protocol |
+| `/security` | Badge types, zone maps, banned list |
 | `/before-you-arrive` | Shared "Before You Arrive: Saturday, May 9" page |
 | `/day-of-professionalism` | Shared "Day-of Professionalism" page |
 

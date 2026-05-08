@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#050505">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/assets/images/gold-house-ico.png">
+<link rel="apple-touch-icon" href="/assets/images/gold-house-ico.png">
+<meta property="og:title" content="Gold Gala 2026 · Staff Hub">
+<meta property="og:description" content="Everything you need to run the night, in one place.">
+<meta property="og:image" content="https://gg26-staff.vercel.app/assets/images/gold-house-ico.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<title>Security · GG26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+  /* Security page-specific styles */
+  .badge-card {
+    background: var(--bg-elev, #0f0f10);
+    border: 1px solid var(--border, #2a2a2c);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+  .badge-card .badge-img {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+  }
+  .badge-card .badge-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gold, #c89c3f);
+    text-align: center;
+    margin: 0 0 8px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .badge-card ul {
+    margin: 0;
+    padding: 0 0 0 16px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .badge-card ul li { margin-bottom: 4px; }
+  .badge-card .restriction {
+    color: #ff6b6b;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .map-card {
+    background: var(--bg-elev, #0f0f10);
+    border: 1px solid var(--border, #2a2a2c);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 14px;
+  }
+  .map-card .map-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gold, #c89c3f);
+    margin: 0 0 8px;
+  }
+  .map-card .map-img {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    background: #fff; /* maps have white bg */
+  }
+
+  .banned-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  @media (min-width: 480px) {
+    .banned-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .banned-card {
+    background: var(--bg-elev, #0f0f10);
+    border: 1px solid var(--border, #2a2a2c);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .banned-card .photo-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #1a1a1c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banned-card .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .banned-card .photo-wrap.no-photo {
+    color: var(--text-dim, #888);
+    font-size: 11px;
+    font-style: italic;
+    padding: 12px;
+    text-align: center;
+  }
+  .banned-card .name {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 6px;
+    color: var(--text, #f0f0f0);
+    line-height: 1.3;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a class="back" href="/" aria-label="Back to home">←</a>
+    <span class="title">Security</span>
+  </header>
+
+  <div class="page-content dense">
+
+    <div class="callout callout-alert" style="margin-top: 8px">
+      <div class="label">🚨 Emergency · Channel 16</div>
+      <div class="body">
+        Channel <strong>16</strong> reaches Mara Girvin (Sequoia liaison to APEX Security &amp; LAPD): <a href="tel:+12064657011">206-465-7011</a>
+      </div>
+    </div>
+
+    <h2 class="section-h">Credential Types</h2>
+    <p class="section-sub">5 badge types and what each one grants access to.</p>
+
+    <div class="badge-card">
+      <img src="/assets/images/Event Lead Badge.png" alt="Event Lead badge" class="badge-img">
+      <h3 class="badge-title">Event Lead</h3>
+      <ul>
+        <li>All Event Spaces (no restrictions)</li>
+        <li><strong>Escort Access</strong> — able to allow other people access to restricted areas</li>
+      </ul>
+    </div>
+
+    <div class="badge-card">
+      <img src="/assets/images/Event Team Badge.png" alt="Event Team badge" class="badge-img">
+      <h3 class="badge-title">Event Team</h3>
+      <ul>
+        <li>All Event Spaces</li>
+        <li class="restriction">No Escort Access</li>
+      </ul>
+    </div>
+
+    <div class="badge-card">
+      <img src="/assets/images/Carpet Badge.png" alt="Carpet badge" class="badge-img">
+      <h3 class="badge-title">Carpet</h3>
+      <ul>
+        <li>Gold Stairs / Step &amp; Repeat</li>
+        <li>Press Line (carpet)</li>
+        <li class="restriction">No access to anything on the Hope Street side of event or inside DCP.</li>
+      </ul>
+    </div>
+
+    <div class="badge-card">
+      <img src="/assets/images/Dinner &amp; Backstage Badge.png" alt="Dinner &amp; Backstage badge" class="badge-img">
+      <h3 class="badge-title">Dinner &amp; Backstage</h3>
+      <ul>
+        <li>All event spaces</li>
+        <li class="restriction">No access to Founders Room during cocktails.</li>
+      </ul>
+    </div>
+
+    <div class="badge-card">
+      <img src="/assets/images/DCP Badge.png" alt="DCP badge" class="badge-img">
+      <h3 class="badge-title">DCP</h3>
+      <ul>
+        <li>DCP (1st &amp; 2nd Floors)</li>
+        <li>Gold House Office (5th Floor — DCP)</li>
+        <li class="restriction">No access to anything on the Grand Avenue side of event, VIP areas, or within the dinner space on plaza.</li>
+      </ul>
+    </div>
+
+    <h2 class="section-h" style="margin-top: 28px">Badge Access by Zone</h2>
+    <p class="section-sub">Maps show which badges grant access to each area.</p>
+
+    <div class="map-card">
+      <div class="map-title">Jerry Moss Plaza (JMP) — Cocktails · 4:30–7:00 PM</div>
+      <img src="/assets/images/Badge Access - Cocktails.png" alt="JMP badge access map for cocktails" class="map-img">
+    </div>
+
+    <div class="map-card">
+      <div class="map-title">DCP 1st Floor — Cocktails (4:30–7 PM) &amp; After Party (10 PM–1 AM)</div>
+      <img src="/assets/images/Badge Access - DCP 1st Floor - Cocktails &amp; Afterparty.png" alt="DCP 1st floor badge access map" class="map-img">
+    </div>
+
+    <div class="map-card">
+      <div class="map-title">DCP 2nd Floor — After Party · 10 PM–1 AM</div>
+      <img src="/assets/images/Badge Access - DCP 2nd Floor - Afterparty.png" alt="DCP 2nd floor badge access map" class="map-img">
+    </div>
+
+    <h2 class="section-h" style="margin-top: 28px">⚠️ Banned List</h2>
+    <p class="section-sub">If you spot any of these individuals on-site, alert security immediately on Channel 16. Do not engage.</p>
+
+    <div class="banned-grid">
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/anip-patel.jpg" alt="" loading="lazy"></div>
+        <div class="name">Anip Patel</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/adrian-dev.jpg" alt="" loading="lazy"></div>
+        <div class="name">Adrian Dev</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/cecilia-pagkalinawan.png" alt="" loading="lazy"></div>
+        <div class="name">Cecilia Pagkalinawan</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/brad-jenkins.png" alt="" loading="lazy"></div>
+        <div class="name">Brad Jenkins</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/yi-zhou.png" alt="" loading="lazy"></div>
+        <div class="name">Yi Zhou</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/panney-wei.png" alt="" loading="lazy"></div>
+        <div class="name">Panney Wei</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/jefre.png" alt="" loading="lazy"></div>
+        <div class="name">Jefre</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/jiaoying-summers.jpg" alt="" loading="lazy"></div>
+        <div class="name">Jiaoying Summers</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/jaren-lewison.jpg" alt="" loading="lazy"></div>
+        <div class="name">Jaren Lewison</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/keshia-sih-tseng.jpg" alt="" loading="lazy"></div>
+        <div class="name">Keshia Sih-Tseng</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/surae-chinn.png" alt="" loading="lazy"></div>
+        <div class="name">Surae Chinn</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/sean-teale.jpg" alt="" loading="lazy"></div>
+        <div class="name">Sean Teale</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/rajiv-satyal.jpg" alt="" loading="lazy"></div>
+        <div class="name">Rajiv Satyal</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/sabeen-faheem.jpg" alt="" loading="lazy"></div>
+        <div class="name">Sabeen Faheem</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/mamta-trivedi.jpg" alt="" loading="lazy"></div>
+        <div class="name">Mamta Trivedi</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap"><img src="/assets/images/banned/deborah-s-craig.jpg" alt="" loading="lazy"></div>
+        <div class="name">Deborah S Craig</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap no-photo">photo unavailable</div>
+        <div class="name">Bonny Rice</div>
+      </div>
+      <div class="banned-card">
+        <div class="photo-wrap no-photo">photo unavailable</div>
+        <div class="name">Jessie Chen</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
