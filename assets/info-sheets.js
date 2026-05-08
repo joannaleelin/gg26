@@ -1743,92 +1743,6 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
-  // Diego Estuar
-  "diego-estuar":
-  {
-    "role_title": "PRODUCTION SUPPORT",
-    "staff_call_time": "11:00 AM",
-    "assignments": [
-      {
-        "phase": "Pre-Event",
-        "time": "2:30–4:30 PM",
-        "role": "No assignment",
-        "location": "—",
-        "role_leader": "—"
-      },
-      {
-        "phase": "Cocktails",
-        "time": "4:30–6:30 PM",
-        "role": "Production Float",
-        "location": "—",
-        "role_leader": "Linda Chu — (860) 398-0834"
-      },
-      {
-        "phase": "Transition to Dinner",
-        "time": "6:20–7:00 PM",
-        "role": "Float",
-        "location": "—",
-        "role_leader": "—"
-      },
-      {
-        "phase": "Dinner & Program",
-        "time": "7:00–9:30 PM",
-        "role": "Production Float",
-        "location": "—",
-        "role_leader": "Linda Chu — (860) 398-0834"
-      },
-      {
-        "phase": "Transition to Afterparty",
-        "time": "~9:30–10:00 PM",
-        "role": "Wrap-up",
-        "location": "—",
-        "role_leader": "—"
-      },
-      {
-        "phase": "Founders Party",
-        "time": "10:00 PM–1:00 AM",
-        "role": "No assignment",
-        "location": "—",
-        "role_leader": "—"
-      }
-    ],
-    "assignment_notes": [
-      "No formal assignment during Founders Party. Feel free to enjoy the event — and remember you're still representing Gold House. Stay reachable in case your Lead needs you.",
-      "To wrap-up, please notify LInda or Joanna that you’re done for the evening. Additionally, if you have a walkie/radio, please return it back to the Gold House Production office."
-    ],
-    "role_descriptions": [
-      {
-        "title": "PRODUCTION — during Cocktails / Dinner & Program",
-        "sections": [
-          {
-            "heading": "Your role",
-            "body": "The Production team supports real-time production needs across all phases."
-          },
-          {
-            "heading": "What you'll do",
-            "items": [
-              "Cocktails sub-positions: 2 at cocktail party, 2 GA outdoor, 2 press/Gold Carpet, 1 VIP Room, 1 Production Office Runner",
-              "Dinner: transition to flip prep",
-              "Founders Party: 2 assisting guest exit + 1 floater"
-            ]
-          },
-          {
-            "heading": "Duties",
-            "items": [
-              "Pre-Cocktails: L'Oreal and Maybelline bathroom + touch-up station product display (GH), small print drop on cocktail and afterparty hiboys (SQ)",
-              "Afterparty: Maybelline karaoke room setup (GH + SQ)"
-            ]
-          }
-        ],
-        "lead_name": "Linda Chu",
-        "lead_phone": "(860) 398-0834",
-        "lead_tel": "+18603980834"
-      }
-    ],
-    "ideal_break": "7:00 - 7:45 PM",
-    "additional_contacts": STANDARD_CONTACTS
-  },
-
   // Elizabeth Delfin
   "elizabeth-delfin":
   {
@@ -4139,127 +4053,6 @@ window.GG_INFO_SHEETS = {
     "additional_contacts": STANDARD_CONTACTS
   },
 
-  // Lucia Knell
-  "lucia-knell":
-  {
-    "role_title": "TALENT WRANGLER",
-    "staff_call_time": "12:00 PM",
-    "assignments": [
-      {
-        "phase": "Pre-Event",
-        "time": "2:30–4:30 PM",
-        "role": "No assignment",
-        "location": "—",
-        "role_leader": "—"
-      },
-      {
-        "phase": "Cocktails",
-        "time": "4:30–6:30 PM",
-        "role": "Talent Wrangler - End of Carpet",
-        "location": "Grand Ave",
-        "role_leader": "Rebecca Chin — (267) 253-4998"
-      },
-      {
-        "phase": "Transition to Dinner",
-        "time": "6:20–7:00 PM",
-        "role": "Move w/ talent assignment",
-        "location": "—",
-        "role_leader": "Lorrie Chan — (510) 219-2666"
-      },
-      {
-        "phase": "Dinner & Program",
-        "time": "7:00–9:30 PM",
-        "role": "Talent Wrangler",
-        "location": "JMP - Stage",
-        "role_leader": "Lorrie Chan — (510) 219-2666"
-      },
-      {
-        "phase": "Transition to Afterparty",
-        "time": "~9:30–10:00 PM",
-        "role": "Wrap-up",
-        "location": "—",
-        "role_leader": "—"
-      },
-      {
-        "phase": "Founders Party",
-        "time": "10:00 PM–1:00 AM",
-        "role": "No assignment",
-        "location": "—",
-        "role_leader": "—"
-      }
-    ],
-    "assignment_notes": [
-      "No formal assignment during Pre-Event and Founders Party. Feel free to enjoy the event — and remember you're still representing Gold House. Stay reachable in case your Lead needs you.",
-      "To wrap-up, please notify Lorrie or Joanna that you’re done for the evening. Additionally, if you have a walkie/radio, please return it back to the Gold House Production office."
-    ],
-    "role_descriptions": [
-      {
-        "title": "Talent Wrangler",
-        "sections": [
-          {
-            "heading": "Your role",
-            "body": "Talent Wranglers move on-stage talent (honorees and presenters) through every station of their evening — from arrival to stage to portraits and back. You are the calm, confident presence that keeps talent on schedule and on cue. This role is for on-stage talent only."
-          },
-          {
-            "heading": "You will be assigned to one of three stations",
-            "items": [
-              "Grand Check-in (Lead: Lorrie) — receive arriving talent and route them to their next destination",
-              "Green Room (Lead: Kenna) — escort talent to press carpet during arrivals; manage stage check-ins during programming",
-              "End of Carpet (Lead: Rebecca) — receive talent off press line and escort to the Founders Room"
-            ]
-          },
-          {
-            "heading": "Arrivals & Cocktail",
-            "items": [
-              "Report to Lorrie at 12:00 PM call time to receive your radio and materials; full walkthrough with the Sequoia wranglers will follow",
-              "Take direction from your station lead on where each talent goes next — routing varies by guest and the show may shift in real time",
-              "General Flow: Grand check-in → Gold Stairs/photos → tech check → press carpet → GA step & repeat → NASDAQ Content Studio → Founders Room [Keeping in mind that not everyone goes through all of these stops]",
-              "If your talent needs tech check, flag Kenna in the green room as soon as they arrive",
-              "Smart Water station is at the end of the press line — offer to talent as they come off the carpet, but don't push if they decline",
-              "Genesis GlamBot is along the route to Founders Room — ask if talent wants to participate; on-stage talent may cut the line and Christina Garvin will take it from there"
-            ]
-          },
-          {
-            "heading": "Dinner & Programming",
-            "items": [
-              "You will be assigned a specific talent or talent group per the run of show; review their faces and details in the briefer doc when available",
-              "Always confirm green light with Lorrie before checking in with talent — we don't want to hold talent unnecessarily",
-              "[Talent dependent] 20 minutes before stage, check in with talent and ask if they'd like to use the restroom or need touch-ups",
-              "If yes, bring them to the green room now; if no, return in 5 minutes to escort them backstage",
-              "When talent queues for their stage moment, walk around the back of the stage and meet them on stage left",
-              "Once talent exits the stage, escort the group to portraits",
-              "As you drop off at portraits, check if any other groups are done and escort them back to dinner before returning to the green room",
-              "Report any talent issues immediately to Lorrie"
-            ]
-          },
-          {
-            "heading": "Important partner info",
-            "items": [
-              "Smart Water is a hydration sponsor — station at end of press line; offer to on-stage talent as they come off the carpet",
-              "Genesis GlamBot is stationed along the route to Founders Room — Christina Garvin manages this activation; on-stage talent may cut the line if they wish to participate",
-              "GA step & repeat is prioritized over the press line this year",
-              "NASDAQ content studio is on the 2nd floor of the Dorothy Chandler Pavilion, adjacent to the Founders Room"
-            ]
-          },
-          {
-            "heading": "Important guest info",
-            "items": [
-              "This role is for on-stage talent only — do not pull or escort any other guests",
-              "Talent coming off the press line may need a moment; be warm and give them space to breathe as you walk with them",
-              "GlamBot is entirely optional — offer it, but follow their lead and don't linger if they want to move on",
-              "If you are a dedicated wrangler (Roc Su / Tina Trakheim / Candy Yi / Rebecca Chin), Lorrie will brief you separately on your talent's unique needs and you will be with them at tech check"
-            ]
-          }
-        ],
-        "lead_name": "Lorrie Chan",
-        "lead_phone": "(510) 219-2666",
-        "lead_tel": "+15102192666"
-      }
-    ],
-    "ideal_break": "Talent Team breaks will need to be worked out with Lorrie. You will have a box meal backstage",
-    "additional_contacts": STANDARD_CONTACTS
-  },
-
   // Lucy Khuu
   "lucy-khuu":
   {
@@ -5417,7 +5210,7 @@ window.GG_INFO_SHEETS = {
   // Sean Diep
   "sean-diep":
   {
-    "role_title": "PRODUCTION SUPPORT",
+    "role_title": "PRODUCTION & GIFTING SUPPORT",
     "staff_call_time": "11:00 AM",
     "assignments": [
       {
@@ -5444,22 +5237,22 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Dinner & Program",
         "time": "7:00–9:30 PM",
-        "role": "Production Float",
+        "role": "Move to Gifting at 9 PM",
         "location": "—",
         "role_leader": "Linda Chu — (860) 398-0834"
       },
       {
         "phase": "Transition to Afterparty",
         "time": "~9:30–10:00 PM",
-        "role": "Float",
+        "role": "Support Gifting",
         "location": "—",
         "role_leader": "—"
       },
       {
         "phase": "Founders Party",
         "time": "10:00 PM–1:00 AM",
-        "role": "Production Float",
-        "location": "—",
+        "role": "Gifting Distributor (hand to guest)",
+        "location": "Grand Ave - Gifting",
         "role_leader": "Linda Chu — (860) 398-0834"
       }
     ],
@@ -5469,7 +5262,7 @@ window.GG_INFO_SHEETS = {
     ],
     "role_descriptions": [
       {
-        "title": "PRODUCTION — during Cocktails / Dinner & Program / Founders Party",
+        "title": "PRODUCTION — during Cocktails / Dinner & Program",
         "sections": [
           {
             "heading": "Your role",
@@ -5488,6 +5281,43 @@ window.GG_INFO_SHEETS = {
               "Pre-Cocktails: L'Oreal and Maybelline bathroom + touch-up station product display (GH), small print drop on cocktail and afterparty hiboys (SQ)",
               "Afterparty: Maybelline karaoke room setup (GH + SQ)"
             ]
+          }
+        ],
+        "lead_name": "Linda Chu",
+        "lead_phone": "(860) 398-0834",
+        "lead_tel": "+18603980834"
+      },
+      {
+        "title": "GIFTING & DISTRIBUTION — during Dinner & Program / Founders Party",
+        "sections": [
+          {
+            "heading": "Your role",
+            "body": "The Gifting team hands gift bags to guests at the distribution tables."
+          },
+          {
+            "heading": "What you'll do",
+            "items": [
+              "Hand out gift bags to those in the Gift line.",
+              "The flow for gifting is as follows:",
+              "Any guests headed toward gifting will be reminded by traffic flow staff to have their ticket ready.",
+              "Gift line entrance: Ticket taker/ripper to tear off the gift ticket. Escalation Staff will handle issues and turn away non-Gala guests alongside the ticket taker.",
+              "Gifting table: Greeter directs each guest forward to grab their bag.",
+              "Gift distributors (4) hand out bags and keep pace.",
+              "Post-gift: Flow Staff move guests along and prevent lingering.",
+              "Post-Gift Flow staff: keep guests moving after receiving bag, prevent lingering",
+              "Note: Gifting area on Grand will close at 12a — all bags will move to Hope St valet for continued distribution through end of Founders Party at 1a"
+            ]
+          },
+          {
+            "heading": "Important partner info",
+            "items": [
+              "Dagne Dover is the hero product of the Gold Gala giftbag — please handle bags with care and make sure guests don't crush bags when receiving.",
+              "Similarly, guests should not be throwing items away from the bag within the gifting area — gift bag partners WILL be present and we want to make sure their products are treated with care."
+            ]
+          },
+          {
+            "heading": "Important guest info",
+            "body": "No bag opening in the distribution area. Stanchions around display to prevent theft. Tickets ripped at distribution tables — prevents re-entry."
           }
         ],
         "lead_name": "Linda Chu",
@@ -5895,7 +5725,7 @@ window.GG_INFO_SHEETS = {
   // Ted Wint
   "ted-wint":
   {
-    "role_title": "GREET - GOLD STAIRS & PRODUCTION SUPPORT",
+    "role_title": "GREET - GOLD STAIRS & TALENT WRANGLER",
     "staff_call_time": "11:00 AM",
     "assignments": [
       {
@@ -5908,9 +5738,9 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Cocktails",
         "time": "4:30–6:30 PM",
-        "role": "NASDAQ Content Studio Runner",
+        "role": "Talent Runner",
         "location": "Grand Ave",
-        "role_leader": "Jeremy Tran — (714) 980-0486"
+        "role_leader": "Lorrie Chan — (510) 219-2666"
       },
       {
         "phase": "Transition to Dinner",
@@ -5922,9 +5752,9 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Dinner & Program",
         "time": "7:00–9:30 PM",
-        "role": "Production Float",
-        "location": "—",
-        "role_leader": "Linda Chu — (860) 398-0834"
+        "role": "Talent Wrangler",
+        "location": "JMP - Stage",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
       },
       {
         "phase": "Transition to Afterparty",
@@ -5947,57 +5777,69 @@ window.GG_INFO_SHEETS = {
     ],
     "role_descriptions": [
       {
-        "title": "NASDAQ CONTENT STUDIO — during Cocktails",
+        "title": "Talent Wrangler",
         "sections": [
           {
             "heading": "Your role",
-            "body": "The NASDAQ Content Studio team facilitates social content shoots and video interviews with guests on DCP 2nd Floor space. Daniel Suh is the lead and will direct all shoots."
+            "body": "Talent Wranglers move on-stage talent (honorees and presenters) through every station of their evening — from arrival to stage to portraits and back. You are the calm, confident presence that keeps talent on schedule and on cue. This role is for on-stage talent only."
           },
           {
-            "heading": "What you'll do",
+            "heading": "You will be assigned to one of three stations",
             "items": [
-              "Work with Jeremy & Daniel to bring guests into the NASDAQ Content Studio and run them through the video interviews"
+              "Grand Check-in (Lead: Lorrie) — receive arriving talent and route them to their next destination",
+              "Green Room (Lead: Kenna) — escort talent to press carpet during arrivals; manage stage check-ins during programming",
+              "End of Carpet (Lead: Rebecca) — receive talent off press line and escort to the Founders Room"
+            ]
+          },
+          {
+            "heading": "Arrivals & Cocktail",
+            "items": [
+              "Report to Lorrie at 12:00 PM call time to receive your radio and materials; full walkthrough with the Sequoia wranglers will follow",
+              "Take direction from your station lead on where each talent goes next — routing varies by guest and the show may shift in real time",
+              "General Flow: Grand check-in → Gold Stairs/photos → tech check → press carpet → GA step & repeat → NASDAQ Content Studio → Founders Room [Keeping in mind that not everyone goes through all of these stops]",
+              "If your talent needs tech check, flag Kenna in the green room as soon as they arrive",
+              "Smart Water station is at the end of the press line — offer to talent as they come off the carpet, but don't push if they decline",
+              "Genesis GlamBot is along the route to Founders Room — ask if talent wants to participate; on-stage talent may cut the line and Christina Garvin will take it from there"
+            ]
+          },
+          {
+            "heading": "Dinner & Programming",
+            "items": [
+              "You will be assigned a specific talent or talent group per the run of show; review their faces and details in the briefer doc when available",
+              "Always confirm green light with Lorrie before checking in with talent — we don't want to hold talent unnecessarily",
+              "[Talent dependent] 20 minutes before stage, check in with talent and ask if they'd like to use the restroom or need touch-ups",
+              "If yes, bring them to the green room now; if no, return in 5 minutes to escort them backstage",
+              "When talent queues for their stage moment, walk around the back of the stage and meet them on stage left",
+              "Once talent exits the stage, escort the group to portraits",
+              "As you drop off at portraits, check if any other groups are done and escort them back to dinner before returning to the green room",
+              "Report any talent issues immediately to Lorrie"
+            ]
+          },
+          {
+            "heading": "Important partner info",
+            "items": [
+              "Smart Water is a hydration sponsor — station at end of press line; offer to on-stage talent as they come off the carpet",
+              "Genesis GlamBot is stationed along the route to Founders Room — Christina Garvin manages this activation; on-stage talent may cut the line if they wish to participate",
+              "GA step & repeat is prioritized over the press line this year",
+              "NASDAQ content studio is on the 2nd floor of the Dorothy Chandler Pavilion, adjacent to the Founders Room"
             ]
           },
           {
             "heading": "Important guest info",
             "items": [
-              "Guests should have received advance communications about this content opportunity — you do not need to pitch or over-explain it"
+              "This role is for on-stage talent only — do not pull or escort any other guests",
+              "Talent coming off the press line may need a moment; be warm and give them space to breathe as you walk with them",
+              "GlamBot is entirely optional — offer it, but follow their lead and don't linger if they want to move on",
+              "If you are a dedicated wrangler (Roc Su / Tina Trakheim / Candy Yi / Rebecca Chin), Lorrie will brief you separately on your talent's unique needs and you will be with them at tech check"
             ]
           }
         ],
-        "lead_name": "Daniel Suh",
-        "lead_phone": "(818) 306-7586",
-        "lead_tel": "+18183067586"
-      },
-      {
-        "title": "PRODUCTION — during Dinner & Program / Founders Party",
-        "sections": [
-          {
-            "heading": "Your role",
-            "body": "The Production team supports real-time production needs across all phases."
-          },
-          {
-            "heading": "What you'll do",
-            "items": [
-              "Supporting the Production lead (Linda) & Partnerships lead (Jeffrey) as needed",
-              "Dinner: transition to flip prep"
-            ]
-          },
-          {
-            "heading": "Potential duties",
-            "items": [
-              "Pre-Cocktails: L'Oreal and Maybelline bathroom + touch-up station product display (GH), small print drop on cocktail and afterparty hiboys (SQ)",
-              "Afterparty: Maybelline karaoke room setup (GH + SQ)"
-            ]
-          }
-        ],
-        "lead_name": "Linda Chu",
-        "lead_phone": "(860) 398-0834",
-        "lead_tel": "+18603980834"
+        "lead_name": "Lorrie Chan",
+        "lead_phone": "(510) 219-2666",
+        "lead_tel": "+15102192666"
       }
     ],
-    "ideal_break": "7:00 - 7:45 PM",
+    "ideal_break": "Talent Team breaks will need to be worked out with Lorrie. You will have a box meal backstage",
     "additional_contacts": STANDARD_CONTACTS
   },
 
@@ -6310,7 +6152,7 @@ window.GG_INFO_SHEETS = {
   // Vanessa LE
   "vanessa-le":
   {
-    "role_title": "NASDAQ CONTENT STUDIO & GIFTING SUPPORT",
+    "role_title": "TALENT WRANGLER",
     "staff_call_time": "11:00 AM",
     "assignments": [
       {
@@ -6323,9 +6165,9 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Cocktails",
         "time": "4:30–6:30 PM",
-        "role": "NASDAQ Content Studio Runner (upstairs)",
-        "location": "—",
-        "role_leader": "Daniel Suh — (818) 306-7586"
+        "role": "Talent Wrangler - End of Carpet",
+        "location": "Grand Ave",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
       },
       {
         "phase": "Transition to Dinner",
@@ -6337,93 +6179,101 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Dinner & Program",
         "time": "7:00–9:30 PM",
-        "role": "Move to Gifting at 9 PM",
-        "location": "—",
-        "role_leader": "Linda Chu — (860) 398-0834"
+        "role": "Talent Wrangler",
+        "location": "JMP - Stage",
+        "role_leader": "Lorrie Chan — (510) 219-2666"
       },
       {
         "phase": "Transition to Afterparty",
         "time": "~9:30–10:00 PM",
-        "role": "Move to Hope St.",
+        "role": "Wrap-up",
         "location": "—",
         "role_leader": "—"
       },
       {
         "phase": "Founders Party",
         "time": "10:00 PM–1:00 AM",
-        "role": "Gifting Distributor (hand to guest)",
-        "location": "Grand Ave - Gifting",
-        "role_leader": "Linda Chu — (860) 398-0834"
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
       }
     ],
-    "assignment_notes": [],
+    "assignment_notes": [
+      "No formal assignment during Pre-Event and Founders Party. Feel free to enjoy the event — and remember you're still representing Gold House. Stay reachable in case your Lead needs you.",
+      "To wrap-up, please notify Lorrie or Joanna that you’re done for the evening. Additionally, if you have a walkie/radio, please return it back to the Gold House Production office."
+    ],
     "role_descriptions": [
       {
-        "title": "NASDAQ CONTENT STUDIO — during Cocktails",
+        "title": "Talent Wrangler",
         "sections": [
           {
             "heading": "Your role",
-            "body": "The NASDAQ Content Studio team facilitates social content shoots and video interviews with guests on DCP 2nd Floor space. Daniel Suh is the lead and will direct all shoots."
+            "body": "Talent Wranglers move on-stage talent (honorees and presenters) through every station of their evening — from arrival to stage to portraits and back. You are the calm, confident presence that keeps talent on schedule and on cue. This role is for on-stage talent only."
           },
           {
-            "heading": "What you'll do",
+            "heading": "You will be assigned to one of three stations",
             "items": [
-              "After guests are done with NASDAQ Studio, bring guests downstairs to cocktails. Ted will be running participants from the carpet up to the studio."
+              "Grand Check-in (Lead: Lorrie) — receive arriving talent and route them to their next destination",
+              "Green Room (Lead: Kenna) — escort talent to press carpet during arrivals; manage stage check-ins during programming",
+              "End of Carpet (Lead: Rebecca) — receive talent off press line and escort to the Founders Room"
             ]
           },
           {
-            "heading": "Important guest info",
+            "heading": "Arrivals & Cocktail",
             "items": [
-              "Guests should have received advance communications about this content opportunity — you do not need to pitch or over-explain it"
+              "Report to Lorrie at 12:00 PM call time to receive your radio and materials; full walkthrough with the Sequoia wranglers will follow",
+              "Take direction from your station lead on where each talent goes next — routing varies by guest and the show may shift in real time",
+              "General Flow: Grand check-in → Gold Stairs/photos → tech check → press carpet → GA step & repeat → NASDAQ Content Studio → Founders Room [Keeping in mind that not everyone goes through all of these stops]",
+              "If your talent needs tech check, flag Kenna in the green room as soon as they arrive",
+              "Smart Water station is at the end of the press line — offer to talent as they come off the carpet, but don't push if they decline",
+              "Genesis GlamBot is along the route to Founders Room — ask if talent wants to participate; on-stage talent may cut the line and Christina Garvin will take it from there"
             ]
-          }
-        ],
-        "lead_name": "Daniel Suh",
-        "lead_phone": "(818) 306-7586",
-        "lead_tel": "+18183067586"
-      },
-      {
-        "title": "GIFTING & DISTRIBUTION — during Dinner & Program / Founders Party",
-        "sections": [
-          {
-            "heading": "Your role",
-            "body": "The Gifting team hands gift bags to guests at the distribution tables."
           },
           {
-            "heading": "What you'll do",
+            "heading": "Dinner & Programming",
             "items": [
-              "Hand out gift bags to those in the Gift line.",
-              "The flow for gifting is as follows:",
-              "Any guests headed toward gifting will be reminded by traffic flow staff to have their ticket ready.",
-              "Gift line entrance: Ticket taker/ripper to tear off the gift ticket. Escalation Staff will handle issues and turn away non-Gala guests alongside the ticket taker.",
-              "Gifting table: Greeter directs each guest forward to grab their bag.",
-              "Gift distributors (4) hand out bags and keep pace.",
-              "Post-gift: Flow Staff move guests along and prevent lingering.",
-              "Post-Gift Flow staff: keep guests moving after receiving bag, prevent lingering"
+              "You will be assigned a specific talent or talent group per the run of show; review their faces and details in the briefer doc when available",
+              "Always confirm green light with Lorrie before checking in with talent — we don't want to hold talent unnecessarily",
+              "[Talent dependent] 20 minutes before stage, check in with talent and ask if they'd like to use the restroom or need touch-ups",
+              "If yes, bring them to the green room now; if no, return in 5 minutes to escort them backstage",
+              "When talent queues for their stage moment, walk around the back of the stage and meet them on stage left",
+              "Once talent exits the stage, escort the group to portraits",
+              "As you drop off at portraits, check if any other groups are done and escort them back to dinner before returning to the green room",
+              "Report any talent issues immediately to Lorrie"
             ]
           },
           {
             "heading": "Important partner info",
-            "body": "Dagne Dover is the hero product of the Gold Gala giftbag -- please handle bags with care and make sure guests don't crush bags when receiving. Similarly, guests should not be throwing items away from the bag within the gifting area -- gift bag partners WILL be present and we want to make sure their products are treated with care."
+            "items": [
+              "Smart Water is a hydration sponsor — station at end of press line; offer to on-stage talent as they come off the carpet",
+              "Genesis GlamBot is stationed along the route to Founders Room — Christina Garvin manages this activation; on-stage talent may cut the line if they wish to participate",
+              "GA step & repeat is prioritized over the press line this year",
+              "NASDAQ content studio is on the 2nd floor of the Dorothy Chandler Pavilion, adjacent to the Founders Room"
+            ]
           },
           {
             "heading": "Important guest info",
-            "body": "No bag opening in the distribution area. Stanchions around display to prevent theft. Tickets ripped at distribution tables — prevents re-entry."
+            "items": [
+              "This role is for on-stage talent only — do not pull or escort any other guests",
+              "Talent coming off the press line may need a moment; be warm and give them space to breathe as you walk with them",
+              "GlamBot is entirely optional — offer it, but follow their lead and don't linger if they want to move on",
+              "If you are a dedicated wrangler (Roc Su / Tina Trakheim / Candy Yi / Rebecca Chin), Lorrie will brief you separately on your talent's unique needs and you will be with them at tech check"
+            ]
           }
         ],
-        "lead_name": "Linda Chu",
-        "lead_phone": "(860) 398-0834",
-        "lead_tel": "+18603980834"
+        "lead_name": "Lorrie Chan",
+        "lead_phone": "(510) 219-2666",
+        "lead_tel": "+15102192666"
       }
     ],
-    "ideal_break": "7:00 - 7:45 PM",
+    "ideal_break": "Talent Team breaks will need to be worked out with Lorrie. You will have a box meal backstage",
     "additional_contacts": STANDARD_CONTACTS
   },
 
   // Will Zhou
   "will-zhou":
   {
-    "role_title": "GRAND AVE CHECK IN & FOUNDERS PARTY CHECK-IN SUPPORT",
+    "role_title": "GRAND AVE CHECK IN SUPPORT",
     "staff_call_time": "11:00 AM",
     "assignments": [
       {
@@ -6450,23 +6300,23 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Dinner & Program",
         "time": "7:00–9:30 PM",
-        "role": "Move to Hope St. Founders Party Check-in at 9 PM",
-        "location": "Hope St.",
-        "role_leader": "Caro Delfin — (224) 345-8309"
+        "role": "Wrap-up",
+        "location": "—",
+        "role_leader": "—"
       },
       {
         "phase": "Transition to Afterparty",
         "time": "~9:30–10:00 PM",
-        "role": "Move to Hope St.",
+        "role": "No Assignment",
         "location": "—",
         "role_leader": "—"
       },
       {
         "phase": "Founders Party",
         "time": "10:00 PM–1:00 AM",
-        "role": "Founders Check-In",
-        "location": "Hope St",
-        "role_leader": "Caro Delfin — (224) 345-8309"
+        "role": "No assignment",
+        "location": "—",
+        "role_leader": "—"
       }
     ],
     "assignment_notes": [
@@ -6503,7 +6353,10 @@ window.GG_INFO_SHEETS = {
               "Direct them based on ticket type:",
               "🟡 Gold ticket → write table number → direct guest RIGHT (press line)",
               "⬜ White ticket → write table number → direct guest LEFT (cocktail reception)",
-              "📦 Package → locate the guest's package by their last name → pull out the ticket and confirm the correct table number is on it → hand signal a Guest Escort/Handler behind you → hand the escort the full package"
+              "📦 Package → locate the guest's package by their last name → pull out the ticket and confirm the correct table number is on it → hand signal a Guest Escort/Handler behind you → hand the escort the full package",
+              "If a guest is not in the system: escalate to Caroline — do not attempt to resolve it at the desk.",
+              "If a guest is marked as On-Stage Talent: direct them to the dedicated check-in across the street.",
+              "If guests arrive after 6:30 PM: Gold ticket → short window before dinner at 7:00 PM; White ticket → left side, straight to dinner."
             ]
           },
           {
@@ -6523,59 +6376,9 @@ window.GG_INFO_SHEETS = {
         "lead_name": "Caro Delfin",
         "lead_phone": "(224) 345-8309",
         "lead_tel": "+12243458309"
-      },
-      {
-        "title": "FOUNDERS PARTY CHECK-IN — during Dinner & Program / Founders Party",
-        "sections": [
-          {
-            "heading": "Your role",
-            "body": "The Founders Party Check-In team manages entry to the after party, stationed under the colonnade of the Dorothy Chandler Pavilion."
-          },
-          {
-            "heading": "What you'll do",
-            "items": [
-              "Check each guest's ID — this is especially important for the Founders Party",
-              "Find their name on the check-in list in Google sheets and mark them off",
-              "Give them a wristband for entry",
-              "Once checked in, direct them to the step and repeat for a photo moment. If they don't want to, they can head straight in — no pressure."
-            ]
-          },
-          {
-            "heading": "VIP GUESTS",
-            "items": [
-              "If VIP guests arrive, Surya will escort them to the front of the step and repeat line for their photo, then escort them up to the party and drop them off at the top of the Dorothy Chandler Pavilion stairs",
-              "If a VIP needs a security escort up to the party, flag Caro or Joanna — one of the two security guards stationed with your team can accompany them"
-            ]
-          },
-          {
-            "heading": "SECURITY",
-            "items": [
-              "Two security guards are stationed with the check-in team",
-              "If you need security support for any reason, flag Caro or Joanna"
-            ]
-          },
-          {
-            "heading": "Important partner info",
-            "items": [
-              "No partner activations at this check-in post. Step and repeat is just beyond check-in — direct guests toward it after wristbanding."
-            ]
-          },
-          {
-            "heading": "Important guest info",
-            "items": [
-              "ID check is mandatory for all guests — do not skip this step for the Founders Party",
-              "Step and repeat is optional — offer it, but if a guest wants to head straight in, let them go",
-              "VIP guests will be handled by Surya — if a VIP approaches the desk, check them in normally and let Surya take it from there",
-              "If any situation requires security, flag Joanna rather than trying to handle it yourself — two guards are on site with you"
-            ]
-          }
-        ],
-        "lead_name": "Caro Delfin",
-        "lead_phone": "(224) 345-8309",
-        "lead_tel": "+12243458309"
       }
     ],
-    "ideal_break": "7:00 - 7:45 PM",
+    "ideal_break": "Talent Team breaks will need to be worked out with Lorrie. You will have a box meal backstage",
     "additional_contacts": STANDARD_CONTACTS
   },
 
