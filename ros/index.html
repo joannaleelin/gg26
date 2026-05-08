@@ -17,6 +17,51 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
+<style>
+  .ros-events {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .ros-event {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 12px;
+    align-items: baseline;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(200, 156, 63, 0.18);
+  }
+  .ros-event:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+  .ros-event .e-time {
+    font-family: 'Inter', sans-serif;
+    color: var(--gold-bright, #e8b94a);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .ros-event .e-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text, #f0f0f0);
+  }
+  .ros-event .e-text strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .ros-event.is-end .e-time { color: #ff6b6b; }
+  .ros-event.is-end .e-text { font-weight: 600; letter-spacing: 0.04em; }
+  .ros-block .ros-location {
+    font-size: 12px;
+    color: var(--text-dim, #9a9a9a);
+    margin-top: 4px;
+  }
+</style>
 </head>
 <body>
 <div class="app">
@@ -31,7 +76,7 @@
 
     <div class="callout">
       <div class="label">Heads up</div>
-      <div class="body">This is the high-level phase timing. Detailed cue-to-cue is held by Show team. Confirm specific timing with your lead day-of.</div>
+      <div class="body">This is the high-level schedule. Detailed cue-to-cue is held by the Show team. Confirm specific timing with your lead day-of.</div>
     </div>
 
     <div id="rosContent"></div>
@@ -40,12 +85,53 @@
 
 <script>
 const phases = [
-  { name: 'Pre-Event', time: '2:30 – 4:30 PM', desc: 'Setup, final walkthroughs, staff in position. Talent transportation begins.' },
-  { name: 'Cocktails', time: '4:30 – 6:30 PM', desc: 'Carpet open. VIP check-in at Grand Ave, GA check-in at Hope St. Founders Room cocktails (closed at 6:30 PM). Photo activations live.' },
-  { name: 'Transition to Dinner', time: '6:20 – 7:00 PM', desc: 'Late arrivals routed straight to dinner. Show team to positions. Talent wranglers move to JMP stage.' },
-  { name: 'Dinner & Program', time: '7:00 – 9:30 PM', desc: 'Program runs. Talent staged backstage. Photo/Video covers FOH and stage. No staff in guest sightlines.' },
-  { name: 'Transition to Afterparty', time: '9:00 – 9:30 PM', desc: 'Gifting team to position. Founders check-in opens at Hope St. Departures team at DCP.' },
-  { name: 'Founders Party', time: '9:30 PM – 1:00 AM', desc: 'Karaoke room opens at 11 PM. Gifting through 11 PM. Departures continuous.' },
+  {
+    name: 'Gold Women Breakfast',
+    time: '9:00 – 11:30 AM',
+    location: 'The EDITION West Hollywood',
+    events: [
+      { time: '9:00 – 11:30 AM', text: 'Gold Women Breakfast' },
+    ],
+  },
+  {
+    name: 'Pre-Gala',
+    time: '11:00 AM – 4:30 PM',
+    events: [
+      { time: '11:00 AM', text: 'Call Time (unless otherwise specified in staffing grid)' },
+      { time: '2:00 PM', text: 'Partner staff arrival' },
+      { time: '2:00 – 2:30 PM', text: 'Staff Photos in S&R (optional)' },
+      { time: '3:00 PM', text: 'Press arrivals' },
+      { time: '3:30 PM', text: 'At stations; ready to go' },
+    ],
+  },
+  {
+    name: 'Arrivals & Cocktails',
+    time: '4:30 – 7:00 PM',
+    events: [
+      { time: '4:30 PM', text: 'GRAND opens; talent arrivals begin' },
+      { time: '5:00 PM', text: 'HOPE opens; GA arrivals begin' },
+      { time: '6:30 PM', text: 'Push to dinner' },
+    ],
+  },
+  {
+    name: 'Dinner & Program',
+    time: '7:00 – 9:30 PM',
+    events: [
+      { time: '7:00 PM', text: 'Dinner and program starts' },
+      { time: '9:30 PM', text: 'Dinner and program ends; gifting opens' },
+    ],
+  },
+  {
+    name: 'Founders Party',
+    time: '10:00 PM – 1:00 AM',
+    events: [
+      { time: '10:00 PM', text: 'Founders Party begins' },
+      { time: '10:30 PM', text: 'Joe Taslim DJ set starts' },
+      { time: '10:45 PM', text: 'Plastique Tiara / Nymphia Wind performance' },
+      { time: '11:00 PM', text: 'Karaoke Room opens' },
+      { time: '1:00 AM', text: 'END', isEnd: true },
+    ],
+  },
 ];
 
 function esc(s) {
@@ -56,7 +142,15 @@ document.getElementById('rosContent').innerHTML = phases.map(p => `
   <div class="ros-block">
     <div class="ros-time">${esc(p.time)}</div>
     <div class="ros-name">${esc(p.name)}</div>
-    <div class="ros-desc">${esc(p.desc)}</div>
+    ${p.location ? `<div class="ros-location">${esc(p.location)}</div>` : ''}
+    <div class="ros-events">
+      ${p.events.map(e => `
+        <div class="ros-event ${e.isEnd ? 'is-end' : ''}">
+          <div class="e-time">${esc(e.time)}</div>
+          <div class="e-text">${esc(e.text)}</div>
+        </div>
+      `).join('')}
+    </div>
   </div>
 `).join('');
 </script>
