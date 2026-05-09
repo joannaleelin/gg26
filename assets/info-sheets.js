@@ -266,9 +266,9 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Cocktails",
         "time": "4:30–6:30 PM",
-        "role": "Talent Wrangler - End of Carpet",
+        "role": "Grand Ave Talent Check-in",
         "location": "Grand Ave",
-        "role_leader": "Rebecca Chin — (267) 253-4998"
+        "role_leader": "Lorrie Chan — (510) 219-2666"
       },
       {
         "phase": "Transition to Dinner",
@@ -1995,9 +1995,9 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Dinner & Program",
         "time": "7:00–9:30 PM",
-        "role": "Talent Wrangler",
-        "location": "JMP - Stage",
-        "role_leader": "Lorrie Chan — (510) 219-2666"
+        "role": "Backstage Talent",
+        "location": "JMP - Green Room (Abernathy)",
+        "role_leader": "Kenna Tanouye — (808) 341-4817"
       },
       {
         "phase": "Transition to Afterparty",
@@ -5102,9 +5102,9 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Cocktails",
         "time": "4:30–6:30 PM",
-        "role": "Grand Ave Talent Check-in",
-        "location": "Grand Ave Talent Check-in",
-        "role_leader": "Caro Delfin — (224) 345-8309"
+        "role": "Talent Wrangler - End of Carpet",
+        "location": "Grand Ave",
+        "role_leader": "Rebecca Chin — (267) 253-4998"
       },
       {
         "phase": "Transition to Dinner",
@@ -6165,7 +6165,7 @@ window.GG_INFO_SHEETS = {
       {
         "phase": "Cocktails",
         "time": "4:30–6:30 PM",
-        "role": "Talent Wrangler - End of Carpet",
+        "role": "Grand Ave Talent Check-in",
         "location": "Grand Ave",
         "role_leader": "Lorrie Chan — (510) 219-2666"
       },
